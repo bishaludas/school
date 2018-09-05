@@ -1,0 +1,95 @@
+@media only screen and (max-width: 1600px){
+	.ion-navicon{
+    display: none !important;
+	}
+}
+
+@media only screen and (max-width: 1200px){
+	.autoplay-image {
+    min-height: 135px;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	
+}
+
+@media only screen and (max-width: 994px){
+	.home-text h1 {
+	    font-size: 238%;
+	}
+
+	.hero-image img {
+    width: 70%;
+	}
+	
+	.autoplay-image {
+    min-height: 100px;
+	}
+	
+}
+
+@media only screen and (max-width: 767px){
+	.autoplay-image {
+    min-height: 70px;
+	}
+
+	.mobile-nav-icon{
+    display: none;
+    margin: 10px 0;
+    margin-right: 5%;
+	}
+	
+	nav .menu-nav{
+		float: left;
+		padding-left: 30px;
+		display: none;
+	}
+	nav .menu-nav li{
+		display: block;
+	}
+
+	.ion-navicon{
+    display: block !important;
+	}
+}
+
+
+
+@media only screen and (max-width: 480px){
+	*{
+		font-size: 15px;
+	}
+	.bg-section{
+	padding: 20px 0;
+	}
+	.section{
+		padding: 20px 0;
+	}
+	.menu-nav {
+     margin-bottom: 0px; 
+	}
+	.home-text h1 {
+    	font-size: 255%;
+	}
+	.ion-navicon, .ion-android-close{
+    font-size: 200%;
+	}
+
+	.hero_text {
+    top: 10%;
+   
+}
+
+@media only screen and (max-width: 374px){
+	.hero-img{
+		width: 60%;
+	}
+	.home-text h1 {
+    	font-size: 232%;
+	}
+
+	.hero-btn {
+    display: inline-block;
+    width: 43%;
+}

@@ -1,0 +1,257 @@
+/*global*/
+/*color: #e17055; primary*/ 
+/*color: #fab1a0; secondary*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-family: 'Muli';
+}
+h1, h2, h3, h5,h4, h6{
+	text-transform: uppercase;
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	
+}
+h3, h4{
+	text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 280%;
+    word-spacing: 4px;
+    letter-spacing: 1.5px; 
+}
+h3:after {
+    display: block;
+    height: 3px;
+    background-color: #e17055;
+    content: " ";
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+.clear-fix{
+    clear: both;
+}
+
+
+
+/***************/
+/*Form*/
+/***************/
+input[type="email"],input[type="text"], input[type="password"], input[type="submit"], input[type="date"]{
+    border: solid 1px grey;
+    border-radius: 3px;
+    margin: auto 0;
+    margin-bottom: 1%;
+    padding: 3px 8px;
+    font-size: 90%;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+input[type="submit"]:hover{
+    background: #b3abab;
+}
+
+.hero-btn{
+	text-decoration: none;
+	border: 1px solid #fff;
+	padding: 10px;
+	color: #fff;
+	font-weight: 500;
+	transition: 0.2s;
+}
+.hero-btn:hover{
+	text-decoration: none;
+	background-color: #fff;
+	color: #16a2c3;
+
+}
+
+
+/*top logo banner*/
+.top-logo{
+    background-color: #e17055;
+}
+
+.social-icon, .contact{
+    float:right;
+    color: #fff;
+}
+.social-icon li{
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #444;
+    line-height: 35px;
+    border-radius: 50%;
+}
+.contact li{
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    line-height: 35px;
+    border-radius: 50%;
+}
+
+/*menu hover effect*/
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+
+/*carousel slider fix*/
+.carousel-inner{
+    height: 60vh;
+}
+.cs-img1{ background: url("img/1.jpeg"); }
+.cs-img2{ background: url("img/2.jpeg"); }
+.cs-img3{ background: url("img/3.jpeg"); }
+
+.cs-img1, .cs-img2, .cs-img3{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+}
+
+
+
+/*nav-tablist*/
+.nav-tabs .nav-item{
+    border: 1px solid #dadada;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+   
+.nav-tabs .nav-item .active{
+    background-color: #e17055;
+    border: 1px solid #e17055;
+    color: #fff;
+}
+
+.tab-content{
+    border: 1px solid #dadada;
+    border-top: 0px;
+    padding: 5px;
+    height: 90%;
+}
+
+.tab-mod{
+    padding: 10px;
+}
+
+.tab-mod p{
+    font-size: 95%;
+}
+
+.style-four {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/*about us*/
+.about-image{
+    background-image: url('img/about.jpeg');
+    height: 100%;
+    background-size: cover;
+}
+
+
+/*message*/
+.message{
+    background-color: #dcdcdc;
+}
+
+.message-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 150%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #dadada;
+}
+.message-img{
+    margin: 0 auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.message-img img{
+    width: 100%;
+}
+.message-man{
+    font-size: 120%;
+    margin-bottom: 15px;
+}
+
+
+
+/*news*/
+.ion-ios-paper, .ion-android-calendar{
+    font-size: 150%;
+}
+
+
+.news-list{
+    border-bottom: 1px solid #dadada;
+}
+
+.news-img{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.bg-event{
+    background-color: #e17055;
+    color: #fff
+}
+
+
+/*testimonial*/
+.testimonial{
+    background-image: url('img/4.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff !important;
+}
+
+.testimonial-overlay{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+    height: 400px;
+}
