@@ -18,9 +18,9 @@
 
       <div class="col-md-6">
         <div class="social-icon">
-          <li><i class="ion-social-facebook"></i></li>
-          <li><i class="ion-social-twitter"></i></li>
-          <li><i class="ion-social-youtube"></i></li>
+          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="#"><i class="ion-social-youtube"></i></a></li>
         </div>
         <div class="clear-fix"></div>
 
@@ -29,20 +29,15 @@
           <li><i class="ion-email"></i>&nbsp;&nbsp;school@edu.mail.com</li>
         </div>
       </div>
-    </div>
-
-
-	<!-- 	<div class="sh-logo py-3">		</div> -->
-		
+    </div>		
 	</div>
 </section>
 <!-- end top banner -->
 
-
 <!-- navigation bar -->
 <section class="navigation">
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><i class="ion-ios-home"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -83,7 +78,7 @@
 <!-- BANNER AREA -->
 <div class="container-fluid mb-5">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
         <!-- carousel banner -->
         <div id="carousel-image" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -102,21 +97,21 @@
               <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carousel-image" role="button" data-slide="prev">
+          <!-- <a class="carousel-control-prev" href="#carousel-image" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="carousel-control-next" href="#carousel-image" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> -->
         </div>
       </div>
         <!-- carousel banner end -->
         
 
         <!-- banner-news -->
-        <div class="col-md-4 ">
+        <div class="col-md-3 ">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
@@ -132,6 +127,11 @@
             <div class="tab-pane tab-mod fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus accusantium explicabo amet deserunt incidunt culpa est dolore placeat commodi?
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus accusantium explicabo amet deserunt incidunt culpa est dolore placeat commodi?
+              </p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus accusantium explicabo amet deserunt incidunt culpa est dolore placeat commodi?
               </p>
             </div>
@@ -313,16 +313,32 @@
 
 
 <!-- testimonial -->
-<section class="testimonial my-5">
+<section class="testimonial mt-5">
   <div class="testimonial-overlay py-5">
     <h3>Testimonials</h3>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 offset-md-3 text-center mt-4">
+
+        <!-- start  -->
+        <div class="col-md-3 text-center mt-4">
+          <div class="testimonial-img">
+            <img src="img/people/1.jpg" alt="">
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eligendi voluptatem, laudantium quibusdam aliquid alias totam nam cumque! Minima, quo!
+          </p>
+          <b>Student</b>
+        </div>
+        <!-- end -->
+
+        <div class="col-md-3 text-center mt-4">
           lol 
         </div>
-        <div class="col-md-6 mt-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, cum.</p>
+        <div class="col-md-3 text-center mt-4">
+          lol 
+        </div>
+        <div class="col-md-3 text-center mt-4">
+          lol 
         </div>
           
         </div>
