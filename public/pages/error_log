@@ -1,9 +1,0 @@
-[01-Jul-2018 02:26:32 UTC] PHP Notice:  Undefined variable: yrdata in /home/bishalud/public_html/public/pages/blog.php on line 73
-[01-Jul-2018 02:26:32 UTC] PHP Stack trace:
-[01-Jul-2018 02:26:32 UTC] PHP   1. {main}() /home/bishalud/public_html/public/pages/blog.php:0
-[01-Jul-2018 02:26:32 UTC] PHP Notice:  Undefined variable: image in /home/bishalud/public_html/public/pages/blog.php on line 78
-[01-Jul-2018 02:26:32 UTC] PHP Stack trace:
-[01-Jul-2018 02:26:32 UTC] PHP   1. {main}() /home/bishalud/public_html/public/pages/blog.php:0
-[01-Jul-2018 02:26:32 UTC] PHP Notice:  Undefined variable: content in /home/bishalud/public_html/public/pages/blog.php on line 82
-[01-Jul-2018 02:26:32 UTC] PHP Stack trace:
-[01-Jul-2018 02:26:32 UTC] PHP   1. {main}() /home/bishalud/public_html/public/pages/blog.php:0

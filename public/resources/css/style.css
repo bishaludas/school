@@ -12,8 +12,7 @@
 h1, h2, h3, h5,h4, h6{
 	text-transform: uppercase;
 	font-family: 'Bree Serif', serif;
-	font-weight: 300;
-	
+	font-weight: 300;	
 }
 h3, h4{
 	text-align: center;
@@ -46,6 +45,13 @@ ul{
     clear: both;
 }
 
+.head-link{
+    color: #000;
+}
+.head-link:hover{
+    text-decoration: none;
+    color: #000;
+}
 
 
 /***************/
@@ -150,6 +156,15 @@ input[type="submit"]:hover{
 
 .dropdown-item:hover, .dropdown-item:focus {
     background-color: #dcdcdc;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+    
+}
+
+.form-control {
+    height: calc(2.0rem + 2px);
 }
     
 
@@ -330,4 +345,12 @@ input[type="submit"]:hover{
 
 .footer-list li div{
     margin-left: 20px;
+}
+
+
+/* *********************
+*****pages***********
+********************* */
+.page-content{
+    min-height: 50vh;
 }

@@ -6,74 +6,6 @@
 <?php include(SHARED_PATH.'/header.php'); ?>
 <!-- header end -->		
 
-<!-- top logo banner -->
-<section class="top-logo py-3">
-	<div class="container">
-    <div class="row">
-
-      <div class="col-md-6">
-        <img height="80px" style="float: left;" src="img/css.png" alt="School Logo">
-        <h2 class="pt-3">School Name</h2>
-      </div>
-
-      <div class="col-md-6">
-        <div class="social-icon">
-          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-youtube"></i></a></li>
-        </div>
-        <div class="clear-fix"></div>
-
-        <div class="contact">
-          <li><i class="ion-android-call"></i>&nbsp;&nbsp;+9779841787878 |</li>
-          <li><i class="ion-email"></i>&nbsp;&nbsp;school@edu.mail.com</li>
-        </div>
-      </div>
-    </div>		
-	</div>
-</section>
-<!-- end top banner -->
-
-<!-- navigation bar -->
-<section class="navigation">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-  <a class="navbar-brand" href="#"><i class="ion-ios-home"></i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-     
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-  </nav>
-</section>
-
-<!-- navigation end -->
-
-
 
 <!-- BANNER AREA -->
 <div class="container-fluid mb-5">
@@ -97,6 +29,9 @@
               <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
             </div>
           </div>
+
+          
+          <!-- next prev button -->
           <!-- <a class="carousel-control-prev" href="#carousel-image" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
