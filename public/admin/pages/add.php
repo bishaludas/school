@@ -41,7 +41,7 @@
 				<div class="row pb-2">
 				<div class="col-md-2  text-center">Content</div>
 				<div class="col-md-9">
-					<textarea id="content" class="tinymce" name="post-content" placeholder="body" style="width:167px" ></textarea>
+					<textarea id="content" class="tinymce" name="post-content" placeholder="body"" ></textarea>
 				</div>
 				</div>
 

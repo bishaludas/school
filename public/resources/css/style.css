@@ -9,6 +9,7 @@
 	letter-spacing: 1px;
 	font-family: 'Muli';
 }
+
 h1, h2, h3, h5,h4, h6{
 	text-transform: uppercase;
 	font-family: 'Bree Serif', serif;
@@ -54,6 +55,9 @@ ul{
 }
 .display {
     display: block !important;
+}
+.form-control{
+    color: #000 !important;
 }
 
 /***************/
@@ -101,6 +105,7 @@ input[type="submit"]:hover{
 }
 .social-icon li a{
     color: #fff;
+    display: block;
 }
 
 .contact li{

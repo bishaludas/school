@@ -4,31 +4,21 @@
 		<div class="container">
 		<div class="row py-5">
 			<div class="col-md-4">
-				<div class="footer-title">Useful Links</div>
+				<div class="footer-title">उपयोगी लिङ्कहरू</div>
 				<ul class="footer-list">
-					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a href="#">Lorem ipsum dolor.</a></li>
-					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a href="#">Lorem ipsum dolor.</a></li>
-					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a href="#">Lorem ipsum dolor.</a></li>
-					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a href="#">Lorem ipsum dolor.</a></li>
-					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a href="#">Lorem ipsum dolor.</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="http://nepal.gov.np/">नेपाल सरकार</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="http://moe.gov.np/index.php">शिक्षा मन्त्रालय</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="http://www.doe.gov.np/">शिक्षा विभाग</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="http://www.neb.gov.np/">राष्ट्रिय परीक्षा बोर्ड</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="http://ctevt.org.np/">सिटिईभिटी सानोठिमी, भत्तपुर</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="http://www.psc.gov.np/">लोक सेवा आयोग</a></li>
+					<li><i class="ion-arrow-right-b"></i>&nbsp;&nbsp;<a target="_blank" href="https://www.tsc.gov.np/">शिक्षा सेवा आयोग</a></li>
 				</ul>
 			</div>
 			<div class="col-md-4">
-				<div class="footer-title">Contact</div>
+				<div class="footer-title">सम्पर्क ठेगाना</div>
 				<ul class="footer-list">
-					<li>
-						<i class="ion-ios-location"></i>&nbsp;&nbsp;Example School
-						<div>Kusunti, lalitpur</div>
-						<div>Ward-13</div>
-					</li>
-					<li>
-						<i class="ion-android-call"></i>&nbsp;&nbsp;<span>Phone no :</span>
-						<div>+977 9814578254, 01-4516854</div>
-					</li>
-					<li>
-						<i class="ion-email"></i>&nbsp;&nbsp;
-						<span>example.school@gmail.com.</span>
-					</li>
+					<?php ContactFooter($con); ?>
 				</ul>
 			</div>
 

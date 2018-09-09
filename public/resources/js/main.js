@@ -30,6 +30,14 @@ $(".mobile-nav-icon").on("click", function(){
 
 
 
-$(".post-main").on("click", function(){
-	$(".post-li").fadeToggle(300);
+$(".news").on("click", function(){
+	$(".news-li").fadeToggle(300);
+});
+
+$(".homepage").on("click", function(){
+	$(".home").fadeToggle(300);
+});
+
+$(".program").on("click", function(){
+	$(".p-li").fadeToggle(300);
 });

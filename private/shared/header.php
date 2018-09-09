@@ -39,15 +39,13 @@
 
       <div class="col-md-6">
         <div class="social-icon">
-          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+          <?php FetchSocialHome($con); ?>
+          <a class="btn -btn-sm btn-dark" href="<?php echo url_for('/admin'); ?>">Login</a>
         </div>
         <div class="clear-fix"></div>
 
         <div class="contact">
-          <li><i class="ion-android-call"></i>&nbsp;&nbsp;+9779841787878 |</li>
-          <li><i class="ion-email"></i>&nbsp;&nbsp;school@edu.mail.com</li>
+          <?php FetchContactHome($con); ?>
         </div>
       </div>
     </div>		

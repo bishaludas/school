@@ -17,18 +17,18 @@
 					</tr>
 
 					<?php 
-					$query = mysqli_query($con, "SELECT * FROM post");
+					$query = mysqli_query($con, "SELECT * FROM news ORDER BY date");
 					$counter =1;
 					while ($row = mysqli_fetch_assoc($query)) {
 						$id = $row['id'];
 						$title = $row['title'];
 
-						$catid = $row['category'];
-						$category_query = mysqli_query($con, "SELECT cat_name FROM categories WHERE id='$catid'");
+						$catid = $row['cat_id'];
+						$category_query = mysqli_query($con, "SELECT name FROM categories WHERE id='$catid'");
 						$cat = mysqli_fetch_assoc($category_query);
-						$category = $cat['cat_name'];
+						$category = $cat['name'];
 
-						$image = $row['image'];
+						$image = $row['file_path'];
 						$content = $row['content'];
 						$date = $row['date'];
 
@@ -39,10 +39,12 @@
 						<td>$counter</td>
 						<td style='width: 38%;'><a href=''>".ucfirst($title)."</a></td>
 						<td>".hsc($category)."</td>
-						<td><img src='$image' style='width:80px; height:auto;' alt='post-image'></td>
+						<td>
+							<img src='$image' style='height:60px; ' alt='post-image'>
+						</td>
 						<td style='width: 20%;'>".date('F jS, Y', $yrdata)."</td>
-						<td><a href='".url_for('/admin/index.php?url=edit&post_id='.$id.'')."'>Edit</a></td>
-						<td><a href='".url_for('/admin/index.php?url=delete&post_id='.$id.'')."'>Delete</a></td>
+						<td><a class='btn btn-sm btn-primary' href='".url_for('/admin/index.php?url=editNews&post_id='.$id.'')."'>Edit</a></td>
+						<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&post_id='.$id.'')."'>Delete</a></td>
 						</tr>";
 
 						echo $res;			
