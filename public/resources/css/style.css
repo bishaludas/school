@@ -52,7 +52,9 @@ ul{
     text-decoration: none;
     color: #000;
 }
-
+.display {
+    display: block !important;
+}
 
 /***************/
 /*Form*/
@@ -61,7 +63,7 @@ input[type="email"],input[type="text"], input[type="password"], input[type="subm
     border: solid 1px grey;
     border-radius: 3px;
     margin: auto 0;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
     padding: 3px 8px;
     font-size: 90%;
 }
@@ -353,4 +355,59 @@ input[type="submit"]:hover{
 ********************* */
 .page-content{
     min-height: 50vh;
+}
+
+
+
+/* *********************
+*****admin***********
+********************* */
+.admin-login{
+    background-color: #dcdcdc;
+    border-radius: 5px;
+}
+.bg-cms{
+    background-color: #dcdcdc;
+}
+.cms-head{
+    float: right;
+}
+
+
+.sidebar-wrapper li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+.sidebar-wrapper li:hover{
+    background: #f3f3f3;
+}
+
+.sidebar-wrapper li a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.sidebar-wrapper  .post-li{
+    padding: 0 0 0 10px;
+    display: none;
+}
+
+.Copyright{
+    background-color: #dcdcdc;
+}
+/*cms-body*/
+.cms-body{
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.cms-title{
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.cms-table-border{
+    border: 1px solid #dcdcdc;
 }

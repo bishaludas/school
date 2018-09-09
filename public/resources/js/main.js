@@ -1,6 +1,6 @@
 //navbar fixed top
 $(window).scroll(function(){
-	if($(document).scrollTop()>1200){
+	if($(document).scrollTop()>1000){
 		$('nav').addClass('fixed-top');
 		$('.mobile-nav-icon').fadeIn(100);
 		$('.menu-nav').addClass('new-menu-nav');
@@ -32,4 +32,4 @@ $(".mobile-nav-icon").on("click", function(){
 
 $(".post-main").on("click", function(){
 	$(".post-li").fadeToggle(300);
-})
+});

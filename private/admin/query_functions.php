@@ -12,7 +12,7 @@ function adminLogin($con){
  		// $password =md5($password);
  		$password = db_escape($con, $password);
 
- 		$query = mysqli_query($con, "SELECT * FROM admin_blog WHERE email='$email' AND password = '$password'");
+ 		$query = mysqli_query($con, "SELECT * FROM cms_admin WHERE email='$email' AND password = '$password'");
  		$login_num_rows=mysqli_num_rows($query);
 
  		if ($login_num_rows == 1) {
@@ -29,13 +29,67 @@ function adminLogin($con){
 
  }
 
+// events
+function createEvents($con, $error_array){
+ 	if (isset($_POST['add_event'])) {
+ 		$date = db_escape($con, $_POST['date']);
+ 		$title = db_escape($con, $_POST['event_title']);
+ 		$body = db_escape($con, $_POST['event_body']);
+ 		
+
+ 		$query=mysqli_query($con, "INSERT INTO events(date, title, body) VALUES('$date', '$title', '$body')");
+ 		if ($query) {
+ 			$l = url_for('admin/index.php?url=event');
+ 			header("Location: $l ");
+ 		}
+ 	} 
+}
+
+function viewEvents($con){
+ 	$query = mysqli_query($con, "SELECT * FROM events ORDER BY date");
+ 	$counter =1;
+ 	while ($row = mysqli_fetch_assoc($query)) {
+ 		$id = url($row['id']);
+ 		$event_title = $row['title'];
+ 		$event_body = $row['body'];
+ 		$date = $row['date'];
+ 		$yrdata = strtotime($date);
+
+ 		$res ="<tr>
+ 		<td>$counter</td>
+ 		<td><a style='color:black;' href='".url_for('/admin/index.php?url=delete&id='.$id.'')."'>".hsc(ucfirst($event_title))."</a></td>
+ 		<td>".hsc(ucfirst($event_body))."</td>
+ 		<td>".date('F jS, Y', $yrdata)."</td>
+ 		<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&eventId='.$id.'')."'>Delete</a></td>
+ 		</tr>";
+
+ 		echo $res;			
+ 		++$counter;
+ 	}
+ }
+
+ function deleteEvent($con, $event_id){
+ 	if (isset($_POST["del_yes"])) {
+ 		$query = mysqli_query($con, "DELETE FROM events WHERE id='".db_escape($con, $event_id)."' LIMIT 1" );
+ 		if ($query) {
+ 			$l = url_for('admin/index.php?url=event');
+ 			header("Location: $l ");
+ 		}
+ 	}else{
+ 		if (isset($_POST["del_no"])) {
+ 			$l = url_for('admin/index.php?url=event');
+ 			header("Location: $l ");
+ 		}
+ 	}
+}
+
 
 // categories
 function createCategories($con, $error_array){
  	if (isset($_POST['add_cat'])) {
  		$cat = db_escape($con, $_POST['category']);
 
- 		$query=mysqli_query($con, "INSERT INTO categories VALUES('', '$cat')");
+ 		$query=mysqli_query($con, "INSERT INTO categories(name) VALUES('$cat')");
  		if ($query) {
  			$l = url_for('admin/index.php?url=category');
  			header("Location: $l ");
@@ -48,12 +102,12 @@ function viewCategories($con){
  	$counter =1;
  	while ($row = mysqli_fetch_assoc($query)) {
  		$cat_id = url($row['id']);
- 		$cat_name = $row['cat_name'];
+ 		$cat_name = $row['name'];
 
  		$res ="<tr>
  		<td>$counter</td>
  		<td>".hsc(ucfirst($cat_name))."</td>
- 		<td><a style='color:black;' href='".url_for('/admin/index.php?url=delete&id='.$cat_id.'')."'>Delete &nbsp;<i class='ion-ios-trash-outline'></i></a></td>
+ 		<td><a style='color:black;' href='".url_for('/admin/index.php?url=delete&catId='.$cat_id.'')."'>Delete &nbsp;<i class='ion-ios-trash-outline'></i></a></td>
  		</tr>";
 
  		echo $res;			
@@ -65,7 +119,7 @@ function selectCategory($con){
  	$query = mysqli_query($con, "SELECT * FROM categories");
  	while ($row = mysqli_fetch_assoc($query)) {
  		$cat_id = hsc($row['id']);
- 		$cat_name = hsc($row['cat_name']);
+ 		$cat_name = hsc($row['name']);
 
  		echo "<option value='".$cat_id."'>".$cat_name."</option>";
  	}
@@ -73,7 +127,7 @@ function selectCategory($con){
 
 function deleteCategory($con, $cat_id){
  	if (isset($_POST["del_yes"])) {
- 		$query = mysqli_query($con, "DELETE FROM categories WHERE id='".url($cat_id)."' LIMIT 1" );
+ 		$query = mysqli_query($con, "DELETE FROM categories WHERE id='".db_escape($con,$cat_id)."' LIMIT 1" );
  		if ($query) {
  			$l = url_for('admin/index.php?url=category');
  			header("Location: $l ");
@@ -135,7 +189,7 @@ function submitPost($con){
  	} else {
  		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
  			echo "The file ". basename($post_image). " has been uploaded.";
- 			$query = mysqli_query($con, "INSERT INTO post VALUES('', '$title', '$cat', '$target_file','$content', '$date')");
+ 			$query = mysqli_query($con, "INSERT INTO news VALUES('', '$title', '$cat', '$target_file','$content', '$date')");
 
  		} else {
  			echo "Sorry, there was an error uploading your file.";
