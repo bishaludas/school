@@ -62,20 +62,14 @@
 						<!-- Programs -->
 						<li class="post-main program"><i class="ion-pricetags">&nbsp;&nbsp;</i>Programs <i class="ion-arrow-down-b"></i>
 							<li class="post-li p-li">
-								<a href="<?php echo url_for('admin/index.php?url=about us');?>" style="font-size: 80%; ">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us
+								<a href="<?php echo url_for('admin/index.php?url=view program');?>" style="font-size: 80%; ">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View Programs
 								</a>
 							</li>
 
 							<li class="post-li p-li">
-								<a href="<?php echo url_for('admin/index.php?url=message');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message
-								</a>
-							</li>
-
-							<li class="post-li p-li">
-								<a href="<?php echo url_for('admin/index.php?url=testimonial');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testimonial
+								<a href="<?php echo url_for('admin/index.php?url=add program');?>" style="font-size: 80%;">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Program
 								</a>
 							</li>
 						</li>
@@ -167,7 +161,8 @@
 			include(PUBLIC_PATH."/admin/homepage/contact.php");
 			break;
 
-			// Admin
+
+			// News
 			case 'view news':
 			include(PUBLIC_PATH."/admin/pages/view.php");
 			break;
@@ -184,13 +179,25 @@
 			include(PUBLIC_PATH."/admin/pages/categories.php");
 			break;
 
+
+			//program
+			case 'add program':
+			include(PUBLIC_PATH."/admin/programs/add.php");
+			break;
+
+			case 'view program':
+			include(PUBLIC_PATH."/admin/programs/view.php");
+			break;
+
+
+
+
+     		// event
 			case 'event':
 			include(PUBLIC_PATH."/admin/pages/events.php");
 			break;
 
-			case 'event':
-			include(PUBLIC_PATH."/admin/pages/categories.php");
-			break;
+			
 
 			case 'image':
 			include(PUBLIC_PATH."/admin/pages/image.php");

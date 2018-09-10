@@ -26,6 +26,44 @@ function viewLatestNews($con){
 }
 
 
+function LatestNewsPages($con){
+	$query = mysqli_query($con, "SELECT * FROM news ORDER BY id DESC LIMIT 3");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$title = $row['title'];
+		$image = $row['file_path'];
+		$content = $row['content'];
+		$content = substr($content,0, 80);
+
+		$res ="<div class='row news-list py-2'>
+		<div class='col-lg-4'>
+		<div class='news-img'>
+		<img src='$image' class='img-fluid' alt=''>
+		</div> 
+		</div>
+		<div class='col-lg-8'>
+		<b>".ucwords($title)."</b>
+		<p> $content ...</p>
+		<a href='#' class='btn btn-sm btn-outline-danger'>Read More</a>
+		</div>
+		</div>";
+
+		echo $res;
+	}
+}
+
+
+
+function FetchName($con){
+	$query = mysqli_query($con, "SELECT school_name FROM homepage");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$name = hsc($row['school_name']);
+		
+		$res ="
+		<h2 class='pt-3'>$name</h2>";
+		echo $res;
+	}
+}
+
 function FetchSocialHome($con){
 	$query = mysqli_query($con, "SELECT facebook, twitter, youtube FROM homepage");
 	while ($row = mysqli_fetch_assoc($query)) {
@@ -84,4 +122,14 @@ function ContactFooter($con){
 	}
 }
 
+
+
+ function selectProgram($con){
+ 	$query = mysqli_query($con, "SELECT title FROM programs");
+ 	while ($row = mysqli_fetch_assoc($query)) {
+ 		$name = hsc($row['title']);
+
+ 		echo "<a class='dropdown-item' href='#'>$name</a>";
+ 	}
+ }
 ?>

@@ -10,13 +10,15 @@
 <section class="page-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-9">
 				<?php
-				$favcolor = $_GET['url'];
+				$url = $_GET['url'];
+				echo "<h3>".$url."</h3>";
 
-				switch ($favcolor) {
-					case "Facilities":
-					echo $favcolor;
+				switch ($url) {
+					case "about us":
+					
+					include(PUBLIC_PATH."/pages/aboutus.php");
 					break;
 					case "Alumni":
 					echo "Your favorite color is blue!";
@@ -28,6 +30,11 @@
 					echo "Your favorite color is neither red, blue, nor green!";
 				}
 				?>
+			</div>
+
+			<div class="col-lg-3 border-left">
+				<h2 class="text-center mb-4">समाचार</h2>
+				<?php LatestNewsPages($con); ?>
 			</div>
 		</div>
 	</div>

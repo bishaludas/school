@@ -1,4 +1,4 @@
-<?php $page_title = isset($title)? $title : 'Bishal'; ?>
+<?php $page_title = isset($title)? $title : 'Home'; ?>
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@
       <div class="col-md-6">
       	<a class="head-link" href="<?php echo url_for('/'); ?>">
       		<img height="80px" style="float: left;" src="<?php echo WWW_ROOT.'/img/css.png' ?>" alt="School Logo">
-        <h2 class="pt-3">School Name</h2>
+        <?php FetchName($con); ?>
       	</a>
       </div>
 
@@ -64,8 +64,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo url_for('/pages/') ?>">About Us <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo url_for('/pages?url=about us'); ?>">About Us <span class="sr-only">(current)</span></a>
       </li>
       
       <li class="nav-item dropdown">
@@ -73,10 +73,7 @@
           Academic Programs
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <?php selectProgram($con); ?>
         </div>
       </li>
 

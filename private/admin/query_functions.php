@@ -321,9 +321,9 @@ function selectAboutUslim($con){
 	$query = mysqli_query($con, "SELECT about_us FROM homepage");
 	while ($row = mysqli_fetch_assoc($query)) {
 		$content = $row['about_us'];
-		$content = substr($content,0, 3000);
+		$content = substr($content,0, 2940);
 
-		echo $content."...";
+		echo $content;
 	}
 } 
 
@@ -412,14 +412,14 @@ function fetchContact($con){
 		</div>
 
 		<div class='row pb-2'>
-		<div class='col-md-2  text-center'>Address :</div>
+		<div class='col-md-2  text-center'>Address 1:</div>
 		<div class='col-md-9'>
 		<input type='text' class='form-control' name='address' value='$address'>
 		</div>
 		</div>
 
 		<div class='row pb-2'>
-		<div class='col-md-2  text-center'>Ward :</div>
+		<div class='col-md-2  text-center'>Address 2:</div>
 		<div class='col-md-9'>
 		<input type='text'  class='form-control' name='ward' value='$ward'>
 		</div>
@@ -464,6 +464,72 @@ function updateContact($con){
 
 
 
+/*******************
+***Programs*******
+*******************/
+
+
+ function submitProgram($con){
+ 	if (isset($_POST['submit_post'])) {
+ 		$title = db_escape($con, $_POST['heading']);
+ 		$content = db_escape($con, $_POST['post-content']);
+
+ 		$post_image = $_FILES['fileToUpload']['name'];
+ 		if ($post_image != "") {
+ 			$target_dir = "../img/posts/";
+ 			$target_file = $target_dir .uniqid(). basename($post_image);
+ 			$uploadOk = 1;
+ 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+			// Check if image file is a actual image or fake image
+ 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+ 			if($check !== false) {
+ 				echo "File is an image - " . $check["mime"] . ".";
+ 				$uploadOk = 1;
+ 			} else {
+ 				echo "File is not an image.";
+ 				$uploadOk = 0;
+ 			}
+
+			// Check if file already exists
+ 			if (file_exists($target_file)) {
+ 				echo "Sorry, file already exists.";
+ 				$uploadOk = 0;
+ 			}
+			// Check file size
+ 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+ 				echo "Sorry, your file is too large.";
+ 				$uploadOk = 0;
+ 			}
+			// Allow certain file formats
+ 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+ 				&& $imageFileType != "gif" ) {
+ 				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+ 			$uploadOk = 0;
+ 		}
+			// Check if $uploadOk is set to 0 by an error
+ 		if ($uploadOk == 0) {
+ 			echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+ 		} 
+ 		else {
+ 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+ 				echo "The file ". basename($post_image). " has been uploaded.";
+ 				$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES( '$title', '$target_file','$content')");
+
+ 			} else {
+ 				echo "Sorry, there was an error uploading your file.";
+ 			}
+ 		}	
+ 	}
+ 	else{
+ 		$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES('$title', ' ','$content')");
+ 		if (!$query) {
+ 			echo mysqli_error($con);
+ 		}
+ 	}
+ }
+}
 
 
 
