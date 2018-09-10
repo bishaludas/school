@@ -51,13 +51,10 @@
       <div class="col-md-3 ">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Events</a>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -73,9 +70,6 @@
             </p>
           </div>
           <div class="tab-pane tab-mod fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!</p>
-          </div>
-          <div class="tab-pane tab-mod fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!</p>
           </div>
         </div>
@@ -120,9 +114,9 @@
           <div class="message-title">MESSAGE FROM Principle</div>
 
           <div class="message-img">
-            <img src="img/people/1.jpg" alt="">
+            <img src="img/people/3.jpg" alt="">
           </div>
-          <p class="message-man text-center">Mr. Someone</p>
+          <p class="message-man text-center">Mr. Purna Bhandari Pankaj</p>
 
           <p class="message-body">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolores ab magni, placeat in. Laboriosam et, nulla aspernatur quam asperiores praesentium. Velit id animi maiores veniam impedit suscipit corporis unde.

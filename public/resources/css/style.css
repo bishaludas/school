@@ -47,11 +47,14 @@ ul{
 }
 
 .head-link{
-    color: #000;
+    color: #fff;
 }
 .head-link:hover{
     text-decoration: none;
-    color: #000;
+    color: #fff;
+}
+.head-link h2{
+   width: 70%;
 }
 .display {
     display: block !important;
@@ -127,6 +130,7 @@ input[type="submit"]:hover{
 }
 .navbar{
     padding: 0 1rem !important;
+    border-bottom: 1px solid #f3f3f3;
 }
 .bg-light{
     background-color: #dcdcdc !important;
@@ -142,6 +146,9 @@ input[type="submit"]:hover{
     font-weight: 600;
 }
 
+.head-home{
+    margin-top: -5px;
+}
 
 
 

@@ -31,8 +31,8 @@
     <div class="row">
 
       <div class="col-md-6">
-      	<a class="head-link" href="<?php echo url_for('/'); ?>">
-      		<img height="80px" style="float: left;" src="<?php echo WWW_ROOT.'/img/css.png' ?>" alt="School Logo">
+      	<a class="head-link " href="<?php echo url_for('/'); ?>">
+      		<img height="100px" class="mr-3" style="float: left;" src="<?php echo WWW_ROOT.'/img/logo.png' ?>" alt="School Logo">
         <?php FetchName($con); ?>
       	</a>
       </div>
@@ -57,7 +57,7 @@
 <!-- navigation bar -->
 <section class="navigation">
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-  <a class="navbar-brand head-link" href="<?php echo url_for('/'); ?>"><i class="ion-ios-home"></i></a>
+  <a class="navbar-brand head-home" href="<?php echo url_for('/'); ?>"><i class="ion-ios-home"></i> Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -77,25 +77,12 @@
         </div>
       </li>
 
-       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Faculty
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-
-
       <li class="nav-item">
         <a class="nav-link" href="<?php echo url_for('/pages?url=Facilities') ?>">Facilities</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo url_for('/pages?url=Alumni') ?>">Alumni</a>
+        <a class="nav-link" href="<?php echo url_for('/pages?url=Alumni') ?>">JFSS</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -112,6 +99,10 @@
 
       <li class="nav-item">
         <a class="nav-link" href="#">Gallery</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Career</a>
       </li>
      
     </ul>

@@ -321,7 +321,7 @@ function selectAboutUslim($con){
 	$query = mysqli_query($con, "SELECT about_us FROM homepage");
 	while ($row = mysqli_fetch_assoc($query)) {
 		$content = $row['about_us'];
-		$content = substr($content,0, 2940);
+		$content = substr($content,0, 2932);
 
 		echo $content;
 	}
