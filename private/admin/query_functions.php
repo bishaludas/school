@@ -464,73 +464,168 @@ function updateContact($con){
 
 
 
-/*******************
-***Programs*******
-*******************/
+function submitProgram($con){
+	if (isset($_POST['submit_post'])) {
+		$title = db_escape($con, $_POST['heading']);
+		$content = db_escape($con, $_POST['post-content']);
 
-
- function submitProgram($con){
- 	if (isset($_POST['submit_post'])) {
- 		$title = db_escape($con, $_POST['heading']);
- 		$content = db_escape($con, $_POST['post-content']);
-
- 		$post_image = $_FILES['fileToUpload']['name'];
- 		if ($post_image != "") {
- 			$target_dir = "../img/posts/";
- 			$target_file = $target_dir .uniqid(). basename($post_image);
- 			$uploadOk = 1;
- 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+		$post_image = $_FILES['fileToUpload']['name'];
+		if ($post_image != "") {
+			$target_dir = "../img/posts/";
+			$target_file = $target_dir .uniqid(). basename($post_image);
+			$uploadOk = 1;
+			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 			// Check if image file is a actual image or fake image
- 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
- 			if($check !== false) {
- 				echo "File is an image - " . $check["mime"] . ".";
- 				$uploadOk = 1;
- 			} else {
- 				echo "File is not an image.";
- 				$uploadOk = 0;
- 			}
+			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+			if($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				$uploadOk = 1;
+			} else {
+				echo "File is not an image.";
+				$uploadOk = 0;
+			}
 
 			// Check if file already exists
- 			if (file_exists($target_file)) {
- 				echo "Sorry, file already exists.";
- 				$uploadOk = 0;
- 			}
+			if (file_exists($target_file)) {
+				echo "Sorry, file already exists.";
+				$uploadOk = 0;
+			}
 			// Check file size
- 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
- 				echo "Sorry, your file is too large.";
- 				$uploadOk = 0;
- 			}
+			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+				echo "Sorry, your file is too large.";
+				$uploadOk = 0;
+			}
 			// Allow certain file formats
- 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
- 				&& $imageFileType != "gif" ) {
- 				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
- 			$uploadOk = 0;
- 		}
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+				&& $imageFileType != "gif" ) {
+				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+			$uploadOk = 0;
+		}
 			// Check if $uploadOk is set to 0 by an error
- 		if ($uploadOk == 0) {
- 			echo "Sorry, your file was not uploaded.";
+		if ($uploadOk == 0) {
+			echo "Sorry, your file was not uploaded.";
 				// if everything is ok, try to upload file
- 		} 
- 		else {
- 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
- 				echo "The file ". basename($post_image). " has been uploaded.";
- 				$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES( '$title', '$target_file','$content')");
+		} 
+		else {
+			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+				echo "The file ". basename($post_image). " has been uploaded.";
+				$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES( '$title', '$target_file','$content')");
 
- 			} else {
- 				echo "Sorry, there was an error uploading your file.";
- 			}
- 		}	
- 	}
- 	else{
- 		$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES('$title', ' ','$content')");
- 		if (!$query) {
- 			echo mysqli_error($con);
- 		}
- 	}
- }
+			} else {
+				echo "Sorry, there was an error uploading your file.";
+			}
+		}	
+	}
+	else{
+		$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES('$title', ' ','$content')");
+		if (!$query) {
+			echo mysqli_error($con);
+		}
+	}
+}
 }
 
 
+function editProgram($con, $prog_id){
+	if (isset($_POST['edit_post'])) {
+		$title = $_POST['heading'];
+		$content = $_POST['post-content'];
 
+		$post_image = $_FILES['fileToUpload']['name'];
+		if ($post_image != "") {
+			$target_dir = "../img/posts/";
+			$target_file = $target_dir .uniqid(). basename($post_image);
+			$uploadOk = 1;
+			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+			// Check if image file is a actual image or fake image
+			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+			if($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				$uploadOk = 1;
+			} else {
+				echo "File is not an image.";
+				$uploadOk = 0;
+			}
+
+			// Check if file already exists
+			if (file_exists($target_file)) {
+				echo "Sorry, file already exists.";
+				$uploadOk = 0;
+			}
+			// Check file size
+			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+				echo "Sorry, your file is too large.";
+				$uploadOk = 0;
+			}
+			// Allow certain file formats
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+				&& $imageFileType != "gif" ) {
+				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+			$uploadOk = 0;
+		}
+			// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 0) {
+			echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+		} 
+		else {
+			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+				echo "The file ". basename($post_image). " has been uploaded.";
+				$query = mysqli_query($con, "UPDATE programs SET title = '$title', file_path = '$target_file', content ='$content' WHERE id = '$prog_id' ");
+				if ($query) {
+					$l = url_for('admin/index.php?url=edit program&prog_id='.$prog_id.'');
+					header("Location: $l ");
+				}
+				if (!$query) {
+					echo mysqli_error($con);
+				}
+			} else {
+				echo "Sorry, there was an error uploading your file.";
+			}
+		}	
+	}else{
+		$query = mysqli_query($con, "UPDATE programs SET title = '$title', content ='$content' WHERE id = '$prog_id' ");
+		if ($query) {
+			$l = url_for('admin/index.php?url=edit program&prog_id='.$prog_id.'');
+			header("Location: $l ");
+		}
+		if (!$query) {
+			echo mysqli_error($con);
+		}
+	}
+}
+}
+
+
+/*******************
+***Faculty*******
+*******************/
+function faculty($con){
+	$query = mysqli_query($con, "SELECT * FROM faculty");
+	$counter =1;
+	while ($row = mysqli_fetch_assoc($query)) {
+		$id = $row['id'];
+		$name = $row['name'];
+		$post = $row['post'];
+		$level = $row['level'];
+		$education = $row['education'];
+		$contact = $row['contact'];
+
+		$res ="<tr class='view'>
+		<td>$counter</td>
+		<td>".ucfirst($name)."</a></td>
+		<td>".hsc($post)."</td>
+		<td>".hsc($level)."</td>
+		<td>".hsc($education)."</td>
+		<td>".hsc($contact)."</td>
+		<td><a class='btn btn-sm btn-primary' href='".url_for('/admin/index.php?url=editNews&post_id='.$id.'')."'>Edit</a></td>
+		<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&post_id='.$id.'')."'>Delete</a></td>
+		</tr>";
+
+		echo $res;			
+		++$counter;
+	}
+}
 ?>

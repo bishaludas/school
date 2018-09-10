@@ -71,10 +71,15 @@
 								<a href="<?php echo url_for('admin/index.php?url=add program');?>" style="font-size: 80%;">
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Program
 								</a>
-							</li>
+							</li>							
 						</li>
 
-						
+						<!-- faculty -->
+						<li><a href="<?php echo url_for('admin/index.php?url=faculty');?>">
+								<i class="ion-pricetags">&nbsp;&nbsp;</i>Faculty
+							</a>
+						</li>
+
 						<!-- events -->
 						<li><a href="<?php echo url_for('admin/index.php?url=event');?>">
 								<i class="ion-pricetags">&nbsp;&nbsp;</i>Event
@@ -89,7 +94,7 @@
 						
 
 						<!-- news -->
-						<li class="post-main news"><i class="ion-ios-compose-outline">&nbsp;&nbsp;</i>News <i class="ion-arrow-down-b"></i>
+						<li class="post-main news"><i class="ion-compose">&nbsp;&nbsp;</i>News <i class="ion-arrow-down-b"></i>
 							<li class="post-li news-li">
 								<a href="<?php echo url_for('admin/index.php?url=view news');?>" style="font-size: 80%; ">
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View
@@ -102,7 +107,7 @@
 							</li>
 						</li>
 				<li><a href="<?php echo url_for('admin/index.php?url=image');?>">
-					<i class="ion-ios-camera"></i>&nbsp;&nbsp;Image
+					<i class="ion-ios-camera"></i>&nbsp;&nbsp;Gallery
 				</a>
 				</li>
 				
@@ -186,7 +191,11 @@
 			break;
 
 			case 'view program':
-			include(PUBLIC_PATH."/admin/programs/view.php");
+			include(PUBLIC_PATH."/admin/programs/index.php");
+			break;
+
+			case 'edit program':
+			include(PUBLIC_PATH."/admin/programs/edit.php");
 			break;
 
 
@@ -195,6 +204,11 @@
      		// event
 			case 'event':
 			include(PUBLIC_PATH."/admin/pages/events.php");
+			break;
+
+			// faculty
+			case 'faculty':
+			include(PUBLIC_PATH."/admin/pages/faculty.php");
 			break;
 
 			
