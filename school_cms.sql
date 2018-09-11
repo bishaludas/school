@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 11, 2018 at 02:18 PM
+-- Generation Time: Sep 12, 2018 at 01:13 AM
 -- Server version: 5.7.23-0ubuntu0.18.04.1
 -- PHP Version: 7.2.7-0ubuntu0.18.04.2
 
@@ -39,7 +39,7 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`id`, `details`, `history`, `profile`, `management`) VALUES
-(1, '<p>this is details</p>\r\n<p>&nbsp;à¤²à¥‹à¤•à¤¤à¤¾à¤¨à¥à¤¤à¥à¤°à¤¿à¤• à¤—à¤£à¤¤à¤¨à¥à¤¤à¥à¤° à¤¨à¥‡à¤ªà¤¾à¤²à¤•à¥‹ à¤¸à¤‚à¤˜à¥€à¤¯ à¤¸à¤‚à¤°à¤šà¤¨à¤¾ à¤…à¤¨à¥à¤¤à¤°à¥à¤—à¤¤ à¤•à¤°à¥à¤£à¤¾à¤²à¥€ à¤ªà¥à¤°à¤¦à¥‡à¤¶à¤®à¤¾ à¤ªà¤°à¥à¤¨à¥‡ à¤¸à¤²à¥à¤¯à¤¾à¤¨ à¤œà¤¿à¤²à¥à¤²à¤¾à¤•à¥‹ à¤‰à¤¤à¥à¤¤à¤°à¥€ à¤•à¥à¤·à¥‡à¤¤à¥à¤°à¤•à¥‹ à¤¶à¥ˆà¤•à¥à¤·à¤¿à¤• à¤•à¥‡à¤¨à¥à¤¦à¥à¤°à¤•à¤¾ à¤°à¥à¤ªà¤®à¤¾ à¤®à¤¹à¤¤à¥à¤µà¤ªà¥‚à¤°à¥à¤£ à¤¸à¥à¤¥à¤¾à¤¨ à¤®à¤¾à¤¨à¤¿à¤¨à¥‡ à¤¬à¤¾à¤—à¤šà¥Œà¤° à¤¨à¤—à¤°à¤ªà¤¾à¤²à¤¿à¤•à¤¾&ndash;à¥¨, à¤¥à¤¾à¤°à¤®à¤¾à¤°à¥‡ à¤¸à¥à¤¥à¤¿à¤¤ à¤¯à¤¸ à¤¶à¥à¤°à¥€ à¤œà¤¨à¤•à¤²à¥à¤¯à¤¾à¤£ à¤¨à¤®à¥à¤¨à¤¾ à¤®à¤¾à¤§à¥à¤¯à¤®à¤¿à¤• à¤µà¤¿à¤¦à¥à¤¯à¤¾à¤²à¤¯à¤•à¥‹ à¤†à¤«à¥à¤¨à¥ˆ à¤›à¥à¤Ÿà¥à¤Ÿà¥ˆ à¤ªà¤¹à¤¿à¤šà¤¾à¤¨ à¤­à¤à¤•à¥‹ à¤•à¥à¤°à¤¾ à¤¸à¤°à¥à¤µà¤µà¤¿à¤¦à¤¿à¤¤à¥ˆ à¤› à¥¤ à¤¯à¤¸à¤•à¥‹ à¤¸à¥à¤¥à¤¾à¤ªà¤¨à¤¾à¤•à¤¾à¤²à¤¦à¥‡à¤–à¤¿ à¤®à¤¾.à¤µà¤¿. à¤¤à¤¥à¤¾ à¤‰.à¤®à¤¾.à¤µà¤¿. à¤¤à¤¹ à¤¸à¤žà¥à¤šà¤¾à¤²à¤¨ à¤—à¤°à¥à¤¦à¤¾ à¤¹à¥‹à¤¸à¥ à¤¯à¤¾ à¤¯à¤¸à¤•à¥ˆ à¤ªà¥à¤°à¤¾à¤™à¥à¤—à¤£à¤¬à¤¾à¤Ÿ à¤œà¤¨à¤•à¤²à¥à¤¯à¤¾à¤£ à¤¬à¥€.à¤à¤¡. à¤•à¥à¤¯à¤¾à¤®à¥à¤ªà¤¸ à¤¸à¥à¤¥à¤¾à¤ªà¤¨à¤¾ à¤—à¤°à¥à¤¦à¤¾ à¤¹à¥‹à¤¸à¥ à¤…à¤ à¤µà¤¿.à¤¸à¤‚. à¥¨à¥¦à¥ªà¥§/à¥ªà¥¨ à¤¸à¤¾à¤²à¤¤à¤¿à¤°à¤•à¥‹ à¤¶à¥à¤°à¤®à¤¶à¤¿à¤µà¤¿à¤° à¤•à¤¾à¤°à¥à¤¯à¤•à¥à¤°à¤® à¤…à¤¨à¥à¤¤à¤°à¥à¤—à¤¤ à¥§à¥¨ à¤«à¤¿à¤Ÿ à¤…à¤—à¥à¤²à¥‹ à¤¡à¤¾à¤à¤¡à¥‹à¤²à¤¾à¤ˆ à¤¸à¤®à¥à¤¯à¤¾à¤à¤°&nbsp; \'U\' à¤†à¤•à¤¾à¤°à¤•à¥‹ à¤­à¤µà¤¨ à¤¨à¤¿à¤°à¥à¤®à¤¾à¤£ à¤—à¤°à¥à¤¦à¤¾à¤•à¥‹ à¤¸à¤¨à¥à¤¦à¤°à¥à¤­ à¤¹à¥‹à¤¸à¥, à¤¯à¤¸à¤²à¥‡ à¤†à¤«à¥à¤¨à¥ˆ à¤ªà¥ƒà¤¥à¤• à¤ªà¤¹à¤¿à¤šà¤¾à¤¨ à¤•à¤¾à¤¯à¤®&nbsp;</p>\r\n<p>&nbsp;</p>', '<p>this is history&nbsp;</p>', '<p>this is school profile</p>', '<p>this is school management</p>');
+(1, '<p>this is details</p>\r\n<p>&nbsp;à¤²à¥‹à¤•à¤¤à¤¾à¤¨à¥à¤¤à¥à¤°à¤¿à¤• à¤—à¤£à¤¤à¤¨à¥à¤¤à¥à¤° à¤¨à¥‡à¤ªà¤¾à¤²à¤•à¥‹ à¤¸à¤‚à¤˜à¥€à¤¯ à¤¸à¤‚à¤°à¤šà¤¨à¤¾ à¤…à¤¨à¥à¤¤à¤°à¥à¤—à¤¤ à¤•à¤°à¥à¤£à¤¾à¤²à¥€ à¤ªà¥à¤°à¤¦à¥‡à¤¶à¤®à¤¾ à¤ªà¤°à¥à¤¨à¥‡ à¤¸à¤²à¥à¤¯à¤¾à¤¨ à¤œà¤¿à¤²à¥à¤²à¤¾à¤•à¥‹ à¤‰à¤¤à¥à¤¤à¤°à¥€ à¤•à¥à¤·à¥‡à¤¤à¥à¤°à¤•à¥‹ à¤¶à¥ˆà¤•à¥à¤·à¤¿à¤• à¤•à¥‡à¤¨à¥à¤¦à¥à¤°à¤•à¤¾ à¤°à¥à¤ªà¤®à¤¾ à¤®à¤¹à¤¤à¥à¤µà¤ªà¥‚à¤°à¥à¤£ à¤¸à¥à¤¥à¤¾à¤¨ à¤®à¤¾à¤¨à¤¿à¤¨à¥‡ à¤¬à¤¾à¤—à¤šà¥Œà¤° à¤¨à¤—à¤°à¤ªà¤¾à¤²à¤¿à¤•à¤¾&ndash;à¥¨, à¤¥à¤¾à¤°à¤®à¤¾à¤°à¥‡ à¤¸à¥à¤¥à¤¿à¤¤ à¤¯à¤¸ à¤¶à¥à¤°à¥€ à¤œà¤¨à¤•à¤²à¥à¤¯à¤¾à¤£ à¤¨à¤®à¥à¤¨à¤¾ à¤®à¤¾à¤§à¥à¤¯à¤®à¤¿à¤• à¤µà¤¿à¤¦à¥à¤¯à¤¾à¤²à¤¯à¤•à¥‹ à¤†à¤«à¥à¤¨à¥ˆ à¤›à¥à¤Ÿà¥à¤Ÿà¥ˆ à¤ªà¤¹à¤¿à¤šà¤¾à¤¨ à¤­à¤à¤•à¥‹ à¤•à¥à¤°à¤¾ à¤¸à¤°à¥à¤µà¤µà¤¿à¤¦à¤¿à¤¤à¥ˆ à¤› à¥¤ à¤¯à¤¸à¤•à¥‹ à¤¸à¥à¤¥à¤¾à¤ªà¤¨à¤¾à¤•à¤¾à¤²à¤¦à¥‡à¤–à¤¿ à¤®à¤¾.à¤µà¤¿. à¤¤à¤¥à¤¾ à¤‰.à¤®à¤¾.à¤µà¤¿. à¤¤à¤¹ à¤¸à¤žà¥à¤šà¤¾à¤²à¤¨ à¤—à¤°à¥à¤¦à¤¾ à¤¹à¥‹à¤¸à¥ à¤¯à¤¾ à¤¯à¤¸à¤•à¥ˆ à¤ªà¥à¤°à¤¾à¤™à¥à¤—à¤£à¤¬à¤¾à¤Ÿ à¤œà¤¨à¤•à¤²à¥à¤¯à¤¾à¤£ à¤¬à¥€.à¤à¤¡. à¤•à¥à¤¯à¤¾à¤®à¥à¤ªà¤¸ à¤¸à¥à¤¥à¤¾à¤ªà¤¨à¤¾ à¤—à¤°à¥à¤¦à¤¾ à¤¹à¥‹à¤¸à¥ à¤…à¤ à¤µà¤¿.à¤¸à¤‚. à¥¨à¥¦à¥ªà¥§/à¥ªà¥¨ à¤¸à¤¾à¤²à¤¤à¤¿à¤°à¤•à¥‹ à¤¶à¥à¤°à¤®à¤¶à¤¿à¤µà¤¿à¤° à¤•à¤¾à¤°à¥à¤¯à¤•à¥à¤°à¤® à¤…à¤¨à¥à¤¤à¤°à¥à¤—à¤¤ à¥§à¥¨ à¤«à¤¿à¤Ÿ à¤…à¤—à¥à¤²à¥‹ à¤¡à¤¾à¤à¤¡à¥‹à¤²à¤¾à¤ˆ à¤¸à¤®à¥à¤¯à¤¾à¤à¤°&nbsp; \'U\' à¤†à¤•à¤¾à¤°à¤•à¥‹ à¤­à¤µà¤¨ à¤¨à¤¿à¤°à¥à¤®à¤¾à¤£ à¤—à¤°à¥à¤¦à¤¾à¤•à¥‹ à¤¸à¤¨à¥à¤¦à¤°à¥à¤­ à¤¹à¥‹à¤¸à¥, à¤¯à¤¸à¤²à¥‡ à¤†à¤«à¥à¤¨à¥ˆ à¤ªà¥ƒà¤¥à¤• à¤ªà¤¹à¤¿à¤šà¤¾à¤¨ à¤•à¤¾à¤¯à¤®&nbsp;</p>\r\n<p>&nbsp;</p>', '<div class=\"my-4\">\r\n<div class=\"my-4\">\r\n<div class=\"my-4\">\r\n<div class=\"my-4\">\r\n<div class=\"my-4\">\r\n<div class=\"my-4\">\r\n<p>this is history&nbsp;</p>\r\n<table style=\"border-collapse: collapse; width: 100%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">à¤•à¥à¤°.à¤¸à¤‚</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤•à¤¾à¤°à¥à¤¯à¤¸à¤®à¤¿à¤¤à¤¿à¤•à¤¾ à¤¸à¤¦à¤¸à¥à¤¯à¤¹à¤°à¥</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤ªà¤¦</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤®à¥à¤ªà¤°à¥à¤• à¤¨à¤®à¥à¤¬à¤°</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">à¥§</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¨à¤¿à¤°à¤œ à¤•à¥‡.à¤¸à¥€</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤…à¤§à¥à¤¯à¤•à¥à¤·</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">2</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤²à¤•à¥à¤·à¥à¤®à¤£ à¤¬à¤¸à¥à¤¨à¥‡à¤¤</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤‰à¤ªà¤¾à¤§à¥à¤¯à¤•à¥à¤·</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">3</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¨à¥‡à¤¤à¥à¤° à¤¬à¤¹à¤¾à¤¦à¥à¤° à¤¡à¤¿.à¤¸à¤¿.</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤®à¤¹à¤¾à¤¸à¤šà¤¿à¤µ</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">4</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¤à¥à¤°à¤¿à¤ªà¥à¤°à¤¾ à¤•à¥‡.à¤¸à¤¿</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤šà¤¿à¤µ</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">5</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤–à¤¿à¤®à¤¬à¤¹à¤¾à¤¦à¥à¤° à¤¡à¤¿.à¤¸à¤¿</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤•à¥‹à¤·à¤¾à¤§à¥à¤¯à¤•à¥à¤·</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">6</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤§à¤¨à¤µà¤¿à¤° à¤¬à¥à¤¢à¤¾</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">7</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤²à¤¿à¤²à¤®à¤¾à¤¨ à¤­à¤£à¥à¤¡à¤¾à¤°à¥€</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">8</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¥à¤°à¥‡à¤¨à¥à¤¦à¥à¤° à¤•à¥‡.à¤¸à¥€.</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">9&nbsp;</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;à¤ˆà¤¨à¥à¤¦à¥à¤° à¤­à¤£à¥à¤¡à¤¾à¤°à¥€</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">10</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤ªà¥à¤°à¤¤à¤¿à¤•à¥à¤·à¤¾ à¤¬à¤¿.à¤•.</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 25%; text-align: center;\">11</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤µà¤¿à¤¨à¤¿à¤¤à¤¾ à¤¡à¤¿.à¤¸à¤¿</td>\r\n<td style=\"width: 25%; text-align: center;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 25%; text-align: center;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', '<p>this is school profile</p>', '<p>this is school management</p>');
 
 -- --------------------------------------------------------
 
@@ -83,6 +83,25 @@ INSERT INTO `cms_admin` (`id`, `email`, `password`, `username`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `download`
+--
+
+CREATE TABLE `download` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `file_path` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `download`
+--
+
+INSERT INTO `download` (`id`, `name`, `file_path`) VALUES
+(1, 'asd', '../documents/5b9815dd6a8e1Correction Factor.docx');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `events`
 --
 
@@ -104,24 +123,23 @@ INSERT INTO `events` (`id`, `date`, `title`, `body`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faculty`
+-- Table structure for table `facilities`
 --
 
-CREATE TABLE `faculty` (
+CREATE TABLE `facilities` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `post` varchar(255) NOT NULL,
-  `level` varchar(255) NOT NULL,
-  `education` varchar(255) NOT NULL,
-  `contact` varchar(255) NOT NULL
+  `file_path` varchar(255) NOT NULL,
+  `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `faculty`
+-- Dumping data for table `facilities`
 --
 
-INSERT INTO `faculty` (`id`, `name`, `post`, `level`, `education`, `contact`) VALUES
-(1, 'bobbobbbob bobbobbob', 'teacher', 'head teacher', 'Masters aid', '9814781809');
+INSERT INTO `facilities` (`id`, `name`, `file_path`, `content`) VALUES
+(2, 'Computer Lab 2', '../img/posts/5b9808ff2da73nepali model new new.jpg', '<p>Computer Lab 2</p>\r\n<p>Computer Lab 2</p>'),
+(3, 'Physics Lab', '../img/posts/5b980cb71dca9nepali model new new.jpg', '<p>Physics LabPhysics LabPhysics Lab</p>');
 
 -- --------------------------------------------------------
 
@@ -152,6 +170,24 @@ INSERT INTO `homepage` (`id`, `about_us`, `facebook`, `twitter`, `youtube`, `sch
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jfss`
+--
+
+CREATE TABLE `jfss` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jfss`
+--
+
+INSERT INTO `jfss` (`id`, `name`) VALUES
+(1, '<p>&nbsp;</p>\r\n<table style=\"border-collapse: collapse; width: 58.0645%; height: 588px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">à¤•à¥à¤°.à¤¸à¤‚</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤•à¤¾à¤°à¥à¤¯à¤¸à¤®à¤¿à¤¤à¤¿à¤•à¤¾ à¤¸à¤¦à¤¸à¥à¤¯à¤¹à¤°à¥</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤ªà¤¦</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">à¤¸à¤®à¥à¤ªà¤°à¥à¤• à¤¨à¤®à¥à¤¬à¤°</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">à¥§</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤¨à¤¿à¤°à¤œ à¤•à¥‡.à¤¸à¥€</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤…à¤§à¥à¤¯à¤•à¥à¤·</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9857824397</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">2</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤²à¤•à¥à¤·à¥à¤®à¤£ à¤¬à¤¸à¥à¤¨à¥‡à¤¤</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤‰à¤ªà¤¾à¤§à¥à¤¯à¤•à¥à¤·</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9809781990</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">3</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤¨à¥‡à¤¤à¥à¤° à¤¬à¤¹à¤¾à¤¦à¥à¤° à¤¡à¤¿.à¤¸à¤¿.</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤®à¤¹à¤¾à¤¸à¤šà¤¿à¤µ</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9851151002</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">4</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤¤à¥à¤°à¤¿à¤ªà¥à¤°à¤¾ à¤•à¥‡.à¤¸à¤¿</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤šà¤¿à¤µ</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9822983806</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">5</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤–à¤¿à¤®à¤¬à¤¹à¤¾à¤¦à¥à¤° à¤¡à¤¿.à¤¸à¤¿</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤•à¥‹à¤·à¤¾à¤§à¥à¤¯à¤•à¥à¤·</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9812880251</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">6</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤§à¤¨à¤µà¤¿à¤° à¤¬à¥à¤¢à¤¾</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9855081309</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">7</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤²à¤¿à¤²à¤®à¤¾à¤¨ à¤­à¤£à¥à¤¡à¤¾à¤°à¥€</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9860409380</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">8</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤¸à¥à¤°à¥‡à¤¨à¥à¤¦à¥à¤° à¤•à¥‡.à¤¸à¥€.</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9841678105</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">9&nbsp;</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">&nbsp;à¤ˆà¤¨à¥à¤¦à¥à¤° à¤­à¤£à¥à¤¡à¤¾à¤°à¥€</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">9812809482</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">10</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤ªà¥à¤°à¤¤à¤¿à¤•à¥à¤·à¤¾ à¤¬à¤¿.à¤•.</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"height: 49px;\">\r\n<td style=\"width: 12.0968%; text-align: center; height: 49px;\">11</td>\r\n<td style=\"width: 20.4838%; text-align: center; height: 49px;\">à¤µà¤¿à¤¨à¤¿à¤¤à¤¾ à¤¡à¤¿.à¤¸à¤¿</td>\r\n<td style=\"width: 10.6989%; text-align: center; height: 49px;\">à¤¸à¤¦à¤¸à¥à¤¯</td>\r\n<td style=\"width: 14.785%; text-align: center; height: 49px;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>&nbsp;</p>');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `message`
 --
 
@@ -167,8 +203,8 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`id`, `message`, `file_path`, `name`) VALUES
-(1, '<p>purna bhandari pankaj principle message</p>', '../img/people/5b97704fe548bpurna bhandari pankaj.jpg', 'purna bhandari pankaj'),
-(2, '<p>chairman message</p>', '../img/people/5b977287df61anepali model new new.jpg', 'Chairman change');
+(1, '<p style=\"text-align: justify;\">purna bhandari pankaj principle message Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem quos quo debitis, quam ducimus iusto tempora ipsum ad, sit numquam nostrum earum sequi,&nbsp;</p>', '../img/people/5b97704fe548bpurna bhandari pankaj.jpg', 'purna bhandari pankaj'),
+(2, '<p>purna bhandari pankaj principle message Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem quos quo debitis, quam ducimus iusto tempora ipsum ad, sit numquam nostrum earum sequi, tenetur odio. Amet aliquam rerum pariatur natus nisi hic, ducimus ut sunt maiores rem ratione aut odit, reprehenderit voluptas repudiandae voluptate suscipit autem veniam neque laborum.</p>', '../img/people/5b977287df61anepali model new new.jpg', 'Chairman change');
 
 -- --------------------------------------------------------
 
@@ -191,7 +227,7 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`id`, `title`, `cat_id`, `file_path`, `content`, `date`) VALUES
 (1, 'Derp', 1, '../img/posts/5b94cee0d76baderp3.png', '<p>&nbsp;Derp post&nbsp;Derp post&nbsp;Derp post&nbsp;Derp post</p>', '2018-09-09'),
-(3, 'Lakhee Pose', 1, '../img/posts/5b94c3831aff140769127_10160700866440403_967106887076020224_n.jpg', '<p>lakhee testlakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test</p>', '2018-09-09');
+(3, 'Lakhee Pose', 1, '../img/posts/5b97d3904ffe4School Image.jpg', '<p>lakhee testlakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test&nbsp;lakhee test</p>', '2018-09-09');
 
 -- --------------------------------------------------------
 
@@ -217,6 +253,26 @@ INSERT INTO `programs` (`id`, `file_path`, `title`, `content`) VALUES
 (4, '', '+2 Science', '<p>à¤¸à¥à¤µà¤°à¥‹à¤œà¤—à¤¾à¤°à¤®à¥‚à¤²à¤•, à¤œà¥€à¤µà¤¨à¥‹à¤ªà¤¯à¥‹à¤—à¥€ à¤° à¤µà¤¿à¤¶à¥à¤µ à¤µà¤œà¤¾à¤°à¤®à¤¾ à¤ªà¥à¤°à¤¤à¤¿à¤·à¥à¤ªà¤°à¥à¤§à¤¾ à¤—à¤°à¥à¤¨ à¤¸à¤•à¥à¤¨à¥‡ à¤œà¤¨à¤¶à¤•à¥à¤¤à¤¿ à¤‰à¤¤à¥à¤ªà¤¾à¤¦à¤¨ à¤—à¤°à¥à¤¨à¥‡ à¤‰à¤¦à¥à¤¦à¥‡à¤¶à¥à¤¯à¤•à¤¾ à¤¸à¤¾à¤¥ à¤¸à¥à¤¥à¤¾à¤ªà¤¨à¤¾ à¤­à¤à¤•à¥‹ à¤¯à¤¸ à¤µà¤¿à¤¦à¥à¤¯à¤¾à¤²à¤¯à¤®à¤¾ à¤¹à¤¾à¤² à¤•à¤•à¥à¤·à¤¾ à¥¯&ndash;à¥§à¥¦ à¤®à¤¾ à¤¸à¤¾à¤§à¤¾à¤°à¤£ à¤° à¤ªà¥à¤°à¤¾à¤µà¤¿à¤§à¤¿à¤• à¤—à¤°à¥€ à¤¦à¥à¤ˆ à¤¸à¤®à¥‚à¤¹ à¤° à¤•à¤•à¥à¤·à¤¾ à¥§à¥§&divide;à¥§à¥¨ à¤µà¤¿à¤œà¥à¤žà¤¾à¤¨, à¤•à¥ƒà¤·à¤¿ à¤µà¤¿à¤œà¥à¤žà¤¾à¤¨, à¤µà¥à¤¯à¤µà¤¸à¥à¤¥à¤¾à¤ªà¤¨, à¤®à¤¾à¤¨à¤µà¤¿à¤•à¥€ à¤° à¤¶à¤¿à¤•à¥à¤·à¤¾ à¤¸à¤®à¥‚à¤¹à¤®à¤¾ à¤ªà¤ à¤¨à¤ªà¤¾à¤ à¤¨ à¤¸à¤žà¥à¤šà¤¾à¤²à¤¨ à¤—à¤°à¤¿à¤à¤•à¥‹ à¤› à¤­à¤¨à¥‡ à¤¬à¤¦à¤²à¤¿à¤à¤¦à¥‹ à¤¸à¤®à¤¯ à¤•à¥à¤°à¤®à¤¸à¤à¤— à¤®à¤²à¥à¤Ÿà¤¿à¤ªà¥à¤°à¤µà¤¿à¤§à¤¿à¤¬à¤¾à¤Ÿ à¤¸à¤®à¥‡à¤¤ à¤ªà¤ à¤¨à¤ªà¤¾à¤ à¤¨ à¤ªà¥à¤°à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤¸à¥à¤°à¥ à¤—à¤°à¤¿à¤à¤•à¥‹ à¤› à¥¤</p>'),
 (6, '', '\nAgricultural Science', '<p>Agriculture program is designed for lower level human resources in the field of Agriculture services equipped with knowledge, skills and attitude necessary for this level of technicians so as to meet the demand of such technician in the country.</p>\n<p>This course is based on the job required to be performed by an agriculture sector in Nepal. This course intends to provide knowledge about following basic level Junior Technical Assistant. It especially provides the knowledge and skills focusing on Agriculture and farm management. To meet the man power needs of the various agricultural institutions in Nepal through the training for the Governmental and nongovernmental sector.</p>\n<p><strong>Aim:</strong>&nbsp;The aim of the program is to produce Junior Technical Assistant (JTA) in the field of Agriculture (plant science), to provide services to the people as a demand of the country.</p>\n<p><strong>Objectives: At the end of this course the trainee will able to:</strong></p>\n<p>1. Fulfill the demand of junior level manpower on the field of agriculture (plant science) of the country.</p>\n<p>2. Start their own business in the field in agriculture (plant science).</p>\n<p><strong>Salient features</strong><br /><strong>Duration:&nbsp;</strong>One Academic year in school and three months on the job training (1560 hrs.+ 3 months OJT)</p>\n<p><strong>Medium of Instruction:</strong>&nbsp;The medium of instruction will be in English and/or Nepali language.</p>\n<p><strong>Course Duration:</strong>&nbsp;This course will be completed within 15 months (1560 hours+ 480 hours OJT) including 3 months on-the-job training should also be completed for issuing successful completion of the course.</p>\n<p><strong>Pattern of Attendance:&nbsp;</strong>The students should have at list 90% attendance required to be eligible for internal assessments and final examinations.</p>\n<p><strong>Eligibility</strong><br />Individuals who meet the following criteria will be allowed to enter into this program:</p>\n<ul>\n<li>SLC pass</li>\n<li>Students should pass entrance examination administered by CTEVT</li>\n<li>They should submit the following documents at the time of application</li>\n<li>SLC pass certificate</li>\n<li>Character certificate</li>\n<li>Citizenship certificate (for the name, parents\' name, age, date of birth and address verification purpose only)</li>\n<li>Final selection will be made on the basis merit list.</li>\n<li>The quota for different category of students will be as per the enrollment policy of CTEVT</li>\n<li>Job prospectus</li>\n<li>The graduate will be eligible for the position equivalent to Non-gazetted 2nd class/level 4 (technical) as Junior Technical Assistant in the field of Agriculture or as prescribed by the Public Service Commission.</li>\n</ul>\n<p><strong>Affilation:</strong>&nbsp;CTEVT</p>\n<p><strong>&nbsp;Degree:</strong>&nbsp;Agriculture</p>\n<p><strong>&nbsp;Duration:</strong>&nbsp;1 year(s)3 month(s)</p>\n<p><strong>Careers</strong><br />Crop Farmers<br />Dairy Farmers<br />Pig and Poultry Farmers</p>');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonial`
+--
+
+CREATE TABLE `testimonial` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `file_path` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testimonial`
+--
+
+INSERT INTO `testimonial` (`id`, `name`, `content`, `file_path`) VALUES
+(5, 'bobo', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, illum.</p>', '../img/people/5b97fefacf8dcnepali model new new.jpg');
+
 --
 -- Indexes for dumped tables
 --
@@ -240,21 +296,33 @@ ALTER TABLE `cms_admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `download`
+--
+ALTER TABLE `download`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `faculty`
+-- Indexes for table `facilities`
 --
-ALTER TABLE `faculty`
+ALTER TABLE `facilities`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `homepage`
 --
 ALTER TABLE `homepage`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `jfss`
+--
+ALTER TABLE `jfss`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -273,6 +341,12 @@ ALTER TABLE `news`
 -- Indexes for table `programs`
 --
 ALTER TABLE `programs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonial`
+--
+ALTER TABLE `testimonial`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -295,19 +369,29 @@ ALTER TABLE `categories`
 ALTER TABLE `cms_admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `download`
+--
+ALTER TABLE `download`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `faculty`
+-- AUTO_INCREMENT for table `facilities`
 --
-ALTER TABLE `faculty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `facilities`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `homepage`
 --
 ALTER TABLE `homepage`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `jfss`
+--
+ALTER TABLE `jfss`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `message`
@@ -323,7 +407,12 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `programs`
 --
 ALTER TABLE `programs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `testimonial`
+--
+ALTER TABLE `testimonial`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
