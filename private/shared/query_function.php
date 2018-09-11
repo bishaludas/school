@@ -125,11 +125,38 @@ function ContactFooter($con){
 
 
  function selectProgram($con){
- 	$query = mysqli_query($con, "SELECT title FROM programs");
+ 	$query = mysqli_query($con, "SELECT id,title FROM programs");
  	while ($row = mysqli_fetch_assoc($query)) {
  		$name = hsc($row['title']);
+ 		$prog_id = hsc($row['id']);
 
- 		echo "<a class='dropdown-item' href='#'>$name</a>";
+ 		echo "<a class='dropdown-item' href='".url_for('/pages?url=academic program&id='.$prog_id.'')."'>$name</a>";
  	}
  }
+
+
+function viewProgram($con, $prog_id){
+  $query = mysqli_query($con, "SELECT * FROM programs WHERE id ='$prog_id' LIMIT 1");
+  while ($row = mysqli_fetch_assoc($query)) {
+    $title = $row['title'];
+
+
+    $image = $row['file_path'] ? $row['file_path'] : '../img/School.jpg';
+
+
+    $content = $row['content'];
+
+    $res ="<div id='about-content'>
+    <span>$title</span>
+    <div class='program-image'>
+    <img style='max-height:500px;' src='$image' alt='image' class='img-fluid'>
+    </div>
+    <div>$content</div>
+    </div>";
+
+    echo $res;
+
+
+  } 
+}
 ?>

@@ -17,12 +17,13 @@
 
 				switch ($url) {
 					case "about us":
-					
 					include(PUBLIC_PATH."/pages/aboutus.php");
 					break;
-					case "Alumni":
-					echo "Your favorite color is blue!";
+
+					case "academic program":
+					include(PUBLIC_PATH."/pages/program.php");
 					break;
+					
 					case "green":
 					echo "Your favorite color is green!";
 					break;

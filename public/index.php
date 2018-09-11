@@ -93,7 +93,7 @@
 
           <div class="about-content py-4">
             <?php selectAboutUslim($con); ?>
-            <div><a href="<?php echo url_for('/pages?url=about us'); ?>" class="btn btn-sm btn-danger">Read More</a></div>
+            <div><a href="<?php echo url_for('/pages?url=about us&column=details'); ?>" class="btn btn-sm btn-danger">Read More</a></div>
           </div>
         </div>
         <div class="col-md-3">

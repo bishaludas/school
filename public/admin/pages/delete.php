@@ -3,6 +3,7 @@
 $event_id = isset($_GET['eventId']) ? $_GET['eventId'] : '';
 $cat_id = isset($_GET['catId']) ? $_GET['catId'] : '';
 $post_id = isset($_GET['post_id']) ? $_GET['post_id'] : '';
+$prog_id = isset($_GET['prog_id']) ? $_GET['prog_id'] : '';
 
 //Functions
 if ($cat_id !="") {
@@ -15,6 +16,11 @@ if ($event_id !="") {
 
 if ($post_id !="") {
 	deletePost($con, $post_id);
+}
+
+
+if ($prog_id !="") {
+	deleteProgram($con, $prog_id);
 }
 
 

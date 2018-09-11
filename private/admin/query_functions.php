@@ -290,7 +290,7 @@ function editPost($con, $post_id){
 
 function deletePost($con, $post_id){
 	if (isset($_POST["del_yes"])) {
-		$query = mysqli_query($con, "DELETE FROM news WHERE id='".url($post_id)."' LIMIT 1" );
+		$query = mysqli_query($con, "DELETE FROM news WHERE id='".db_escape($con, $post_id)."' LIMIT 1" );
 		if ($query) {
 			$l = url_for('admin/index.php?url=view news');
 			header("Location: $l ");
@@ -307,33 +307,33 @@ function deletePost($con, $post_id){
 // ****************
 // HOMEPAGE
 // ****************
-
-function selectAboutUs($con){
-	$query = mysqli_query($con, "SELECT about_us FROM homepage");
-	while ($row = mysqli_fetch_assoc($query)) {
-		$content = $row['about_us'];
-
-		echo $content;
-	}
-} 
-
 function selectAboutUslim($con){
 	$query = mysqli_query($con, "SELECT about_us FROM homepage");
 	while ($row = mysqli_fetch_assoc($query)) {
 		$content = $row['about_us'];
-		$content = substr($content,0, 2932);
+		$content = substr($content,0, 2938);
 
 		echo $content;
 	}
 } 
 
-function submitAboutUs($con){
+
+function selectAboutUs($con, $column){
+	$query = mysqli_query($con, "SELECT $column FROM about_us");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$content = $row[$column];
+
+		echo "<div class='my-4'>$content</div>";
+	}
+} 
+
+function submitAboutUsColumn($con, $column){
 	if (isset($_POST['submit'])) {
 		$content = db_escape($con, $_POST['post-content']);
 
-		$query=mysqli_query($con, "UPDATE homepage SET about_us ='$content' WHERE id='1' ");
+		$query=mysqli_query($con, "UPDATE about_us SET $column ='$content' WHERE id='1' ");
 		if ($query) {
-			$l = url_for('admin/index.php?url=about us');
+			$l = url_for('admin/index.php?url=about us&column='.$column);
 			header("Location: $l ");
 		}else{
 			echo mysqli_error($con);
@@ -464,6 +464,76 @@ function updateContact($con){
 
 
 
+function submitMessage($con, $id){
+ 	if (isset($_POST['submit'])) {
+ 		$name = db_escape($con, $_POST['name']);
+ 		$message = db_escape($con, $_POST['post-content']);
+
+ 		$post_image = $_FILES['fileToUpload']['name'];
+ 		if ($post_image != "") {
+ 			$target_dir = "../img/people/";
+ 			$target_file = $target_dir .uniqid(). basename($post_image);
+ 			$uploadOk = 1;
+ 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+			// Check if image file is a actual image or fake image
+ 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+ 			if($check !== false) {
+ 				echo "File is an image - " . $check["mime"] . ".";
+ 				$uploadOk = 1;
+ 			} else {
+ 				echo "File is not an image.";
+ 				$uploadOk = 0;
+ 			}
+
+			// Check if file already exists
+ 			if (file_exists($target_file)) {
+ 				echo "Sorry, file already exists.";
+ 				$uploadOk = 0;
+ 			}
+			// Check file size
+ 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+ 				echo "Sorry, your file is too large.";
+ 				$uploadOk = 0;
+ 			}
+			// Allow certain file formats
+ 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+ 				&& $imageFileType != "gif" ) {
+ 				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+ 			$uploadOk = 0;
+ 		}
+			// Check if $uploadOk is set to 0 by an error
+ 		if ($uploadOk == 0) {
+ 			echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+ 		} 
+ 		else {
+ 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+ 				echo "The file ". basename($post_image). " has been uploaded.";
+ 				$query = mysqli_query($con, "UPDATE message SET message='$message', file_path='$target_file', name ='$name' WHERE id = '$id' ");
+ 				if ($query) {
+ 					$l = url_for('admin/index.php?url=message&id='.$id.'');
+ 					header("Location: $l ");
+ 				}
+
+ 			} else {
+ 				echo "Sorry, there was an error uploading your file.";
+ 			}
+ 		}	
+ 	}
+ 	else{
+ 		$query = mysqli_query($con, "UPDATE message SET message='$message', name ='$name' WHERE id = '$id' ");
+ 		if ($query) {
+ 			$l = url_for('admin/index.php?url=message&id='.$id.'');
+ 			header("Location: $l ");
+ 		}
+ 	}
+ }
+}
+/*******************
+***Program*******
+*******************/
+
 function submitProgram($con){
 	if (isset($_POST['submit_post'])) {
 		$title = db_escape($con, $_POST['heading']);
@@ -518,7 +588,7 @@ function submitProgram($con){
 		}	
 	}
 	else{
-		$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES('$title', ' ','$content')");
+		$query = mysqli_query($con, "INSERT INTO programs(title, file_path, content) VALUES('$title', '','$content')");
 		if (!$query) {
 			echo mysqli_error($con);
 		}
@@ -598,6 +668,21 @@ function editProgram($con, $prog_id){
 }
 }
 
+
+function deleteProgram($con, $prog_id){
+	if (isset($_POST["del_yes"])) {
+		$query = mysqli_query($con, "DELETE FROM programs WHERE id='".db_escape($con, $prog_id)."' LIMIT 1" );
+		if ($query) {
+			$l = url_for('admin/index.php?url=view program');
+			header("Location: $l ");
+		}
+	}else{
+		if (isset($_POST["del_no"])) {
+			$l = url_for('admin/index.php?url=view program');
+			header("Location: $l ");
+		}
+	}
+}
 
 /*******************
 ***Faculty*******

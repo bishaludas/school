@@ -1,6 +1,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
+			<?php 
+			$column=isset($_GET['column']) ? $_GET['column'] : '';
+			echo "<h4>".$column."</h4>";
+
+			submitAboutUsColumn($con, $column);
+			?>
 			<div class="card post-body">
 				<div class="card-body">
 					
@@ -10,7 +16,7 @@
 							<div class="col-md-2  text-center">Content</div>
 							<div class="col-md-9">
 								<textarea id="content" class="tinymce" name="post-content" placeholder="body"" >
-									<?php selectAboutUs($con) ?>
+									<?php selectAboutUs($con, $column) ?>
 								</textarea>
 							</div>
 						</div>
@@ -22,10 +28,6 @@
 							</div>
 						</div>
 					</form>
-
-					<?php 
-					submitAboutUs($con);
-					?>
 				</div>
 
 			</div>

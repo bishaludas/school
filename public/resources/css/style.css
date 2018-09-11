@@ -15,7 +15,7 @@ h1, h2, h3, h5,h4, h6{
 	font-family: 'Bree Serif', serif;
 	font-weight: 300;	
 }
-h3, h4{
+h3{
 	text-align: center;
 }
 
@@ -187,8 +187,8 @@ input[type="submit"]:hover{
 .carousel-inner{
     height: 60vh;
 }
-.cs-img1{ background: url("img/1.jpeg"); }
-.cs-img2{ background: url("img/2.jpeg"); }
+.cs-img1{ background: url("img/1.jpg"); }
+.cs-img2{ background: url("img/2.jpg"); }
 .cs-img3{ background: url("img/3.jpeg"); }
 
 .cs-img1, .cs-img2, .cs-img3{

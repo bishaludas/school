@@ -10,7 +10,7 @@ $id =isset($_GET['id']) ? $_GET['id'] : 'bla';
 <!-- initialize -->
 <?php require_once('../../private/initialize.php'); ?>
 <!-- initialize end -->
-<?php $title ="Blog | ".$id; ?>
+<?php $title ="जनकल्याण नमुना माध्यमिक विद्यालय"; ?>
 <!-- header -->
 <?php include(SHARED_PATH.'/header.php'); ?>
 <!-- header end -->		

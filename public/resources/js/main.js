@@ -37,6 +37,9 @@ $(".news").on("click", function(){
 $(".homepage").on("click", function(){
 	$(".home").fadeToggle(300);
 });
+$(".about").on("click", function(){
+	$(".about-li").fadeToggle(300);
+});
 
 $(".program").on("click", function(){
 	$(".p-li").fadeToggle(300);

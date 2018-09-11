@@ -22,7 +22,7 @@
 						$id = $row['id'];
 						$title = $row['title'];
 
-						$image = $row['file_path'] ? $row['file_path'] : '';
+						$image = $row['file_path'] ? $row['file_path'] : '../img/School.jpg';
 						$content = $row['content'];
 
 						$res ="<tr class='view'>
@@ -34,7 +34,7 @@
 						</td>
 						
 						<td><a class='btn btn-sm btn-primary' href='".url_for('/admin/index.php?url=edit program&prog_id='.$id.'')."'>Edit</a></td>
-						<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&post_id='.$id.'')."'>Delete</a></td>
+						<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&prog_id='.$id.'')."'>Delete</a></td>
 						</tr>";
 
 						echo $res;			

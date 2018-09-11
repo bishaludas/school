@@ -29,14 +29,14 @@
 						<!-- homepage -->
 						<li class="post-main homepage"><i class="ion-ios-home">&nbsp;&nbsp;</i>Home Page <i class="ion-arrow-down-b"></i>
 							<li class="post-li home">
-								<a href="<?php echo url_for('admin/index.php?url=about us');?>" style="font-size: 80%; ">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us
+								<a href="<?php echo url_for('admin/index.php?url=message&id=1');?>" style="font-size: 80%;">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Principle Message
 								</a>
 							</li>
 
 							<li class="post-li home">
-								<a href="<?php echo url_for('admin/index.php?url=message');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message
+								<a href="<?php echo url_for('admin/index.php?url=message&id=2');?>" style="font-size: 80%;">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chairman Message
 								</a>
 							</li>
 
@@ -59,6 +59,34 @@
 							</li>
 						</li>
 						
+
+						<!-- about us -->
+						<li class="post-main about"><i class="ion-pricetags">&nbsp;&nbsp;</i>About Us <i class="ion-arrow-down-b"></i>
+							<li class="post-li about-li">
+								<a href="<?php echo url_for('admin/index.php?url=about us&column=details');?>" style="font-size: 80%; ">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Details
+								</a>
+							</li>
+
+							<li class="post-li about-li">
+								<a href="<?php echo url_for('admin/index.php?url=about us&column=history');?>" style="font-size: 80%; ">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;History
+								</a>
+							</li>
+
+							<li class="post-li about-li">
+								<a href="<?php echo url_for('admin/index.php?url=about us&column=profile');?>" style="font-size: 80%;">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School Profile
+								</a>
+							</li>	
+
+							<li class="post-li about-li">
+								<a href="<?php echo url_for('admin/index.php?url=about us&column=management');?>" style="font-size: 80%;">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School Management
+								</a>
+							</li>						
+						</li>
+
 						<!-- Programs -->
 						<li class="post-main program"><i class="ion-pricetags">&nbsp;&nbsp;</i>Programs <i class="ion-arrow-down-b"></i>
 							<li class="post-li p-li">
