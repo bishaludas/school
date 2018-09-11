@@ -530,6 +530,86 @@ function submitMessage($con, $id){
 	}
 }
 } 
+
+
+
+function submitTestimonial($con){
+ 	if (isset($_POST['submit'])) {
+ 		$name = $_POST['name'];
+ 		$content = $_POST['post-content'];
+
+ 		$post_image = $_FILES['fileToUpload']['name'];
+ 		if ($post_image != "") {
+ 			$target_dir = "../img/people/";
+ 			$target_file = $target_dir .uniqid(). basename($post_image);
+ 			$uploadOk = 1;
+ 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+			// Check if image file is a actual image or fake image
+ 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+ 			if($check !== false) {
+ 				echo "File is an image - " . $check["mime"] . ".";
+ 				$uploadOk = 1;
+ 			} else {
+ 				echo "File is not an image.";
+ 				$uploadOk = 0;
+ 			}
+
+			// Check if file already exists
+ 			if (file_exists($target_file)) {
+ 				echo "Sorry, file already exists.";
+ 				$uploadOk = 0;
+ 			}
+			// Check file size
+ 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+ 				echo "Sorry, your file is too large.";
+ 				$uploadOk = 0;
+ 			}
+			// Allow certain file formats
+ 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+ 				&& $imageFileType != "gif" ) {
+ 				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+ 			$uploadOk = 0;
+ 		}
+			// Check if $uploadOk is set to 0 by an error
+ 		if ($uploadOk == 0) {
+ 			echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+ 		} 
+ 		else {
+ 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+ 				echo "The file ". basename($post_image). " has been uploaded.";
+ 				$query = mysqli_query($con, "INSERT INTO testimonial(name, content, file_path) VALUES( '$name','$content', '$target_file')");
+
+ 			} else {
+ 				echo "Sorry, there was an error uploading your file.";
+ 			}
+ 		}	
+ 	}
+ 	else{
+ 		$query = mysqli_query($con, "INSERT INTO testimonial(name, content,file_path ) VALUES('$name','$content', '')");
+ 		if (!$query) {
+ 			echo mysqli_error($con);
+ 		}
+ 	}
+ }
+}
+
+
+function deleteTestimonial($con, $t_id){
+	if (isset($_POST["del_yes"])) {
+		$query = mysqli_query($con, "DELETE FROM testimonial WHERE id='".db_escape($con, $t_id)."' LIMIT 1" );
+		if ($query) {
+			$l = url_for('admin/index.php?url=testimonial');
+			header("Location: $l ");
+		}
+	}else{
+		if (isset($_POST["del_no"])) {
+			$l = url_for('admin/index.php?url=testimonial');
+			header("Location: $l ");
+		}
+	}
+}
 /*******************
 ***Program*******
 *******************/
@@ -685,35 +765,90 @@ function deleteProgram($con, $prog_id){
 }
 
 /*******************
-***Faculty*******
+***Facilities*******
 *******************/
-function faculty($con){
-	$query = mysqli_query($con, "SELECT * FROM faculty");
-	$counter =1;
-	while ($row = mysqli_fetch_assoc($query)) {
-		$id = $row['id'];
-		$name = $row['name'];
-		$post = $row['post'];
-		$level = $row['level'];
-		$education = $row['education'];
-		$contact = $row['contact'];
+function submitFacility($con){
+ 	if (isset($_POST['submit'])) {
+ 		$name = $_POST['name'];
+ 		$content = $_POST['post-content'];
 
-		$res ="<tr class='view'>
-		<td>$counter</td>
-		<td>".ucfirst($name)."</a></td>
-		<td>".hsc($post)."</td>
-		<td>".hsc($level)."</td>
-		<td>".hsc($education)."</td>
-		<td>".hsc($contact)."</td>
-		<td><a class='btn btn-sm btn-primary' href='".url_for('/admin/index.php?url=editNews&post_id='.$id.'')."'>Edit</a></td>
-		<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&post_id='.$id.'')."'>Delete</a></td>
-		</tr>";
+ 		$post_image = $_FILES['fileToUpload']['name'];
+ 		if ($post_image != "") {
+ 			$target_dir = "../img/posts/";
+ 			$target_file = $target_dir .uniqid(). basename($post_image);
+ 			$uploadOk = 1;
+ 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-		echo $res;			
-		++$counter;
-	}
+			// Check if image file is a actual image or fake image
+ 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+ 			if($check !== false) {
+ 				echo "File is an image - " . $check["mime"] . ".";
+ 				$uploadOk = 1;
+ 			} else {
+ 				echo "File is not an image.";
+ 				$uploadOk = 0;
+ 			}
+
+			// Check if file already exists
+ 			if (file_exists($target_file)) {
+ 				echo "Sorry, file already exists.";
+ 				$uploadOk = 0;
+ 			}
+			// Check file size
+ 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+ 				echo "Sorry, your file is too large.";
+ 				$uploadOk = 0;
+ 			}
+			// Allow certain file formats
+ 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+ 				&& $imageFileType != "gif" ) {
+ 				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+ 			$uploadOk = 0;
+ 		}
+			// Check if $uploadOk is set to 0 by an error
+ 		if ($uploadOk == 0) {
+ 			echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+ 		} 
+ 		else {
+ 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+ 				echo "The file ". basename($post_image). " has been uploaded.";
+ 				$query = mysqli_query($con, "INSERT INTO facilities(name, file_path, content) VALUES( '$name','$target_file', '$content')");
+			 		if ($query) {
+			 			$l = url_for('admin/index.php?url=facilities');
+						header("Location: $l ");
+			 		}
+ 			} else {
+ 				echo "Sorry, there was an error uploading your file.";
+ 			}
+ 		}	
+ 	}
+ 	else{
+ 		$query = mysqli_query($con, "INSERT INTO facilities(name, file_path, content) VALUES('$name','','$content')");
+
+ 		if ($query) {
+ 			$l = url_for('admin/index.php?url=facilities');
+			header("Location: $l ");
+ 		}
+ 	}
+ }
 }
 
+
+function deleteFacility($con, $f_id){
+	if (isset($_POST["del_yes"])) {
+		$query = mysqli_query($con, "DELETE FROM facilities WHERE id='".db_escape($con, $f_id)."' LIMIT 1" );
+		if ($query) {
+			$l = url_for('admin/index.php?url=facilities');
+			header("Location: $l ");
+		}
+	}else{
+		if (isset($_POST["del_no"])) {
+			$l = url_for('admin/index.php?url=facilities');
+			header("Location: $l ");
+		}
+	}
+}
 
 
 function jsff($con){
@@ -729,6 +864,8 @@ function jsff($con){
 		}
 	} 
 }
+
+
 
 
 ?>

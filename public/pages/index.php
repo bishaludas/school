@@ -20,6 +20,19 @@
 					include(PUBLIC_PATH."/pages/aboutus.php");
 					break;
 
+					case "news":
+					include(PUBLIC_PATH."/pages/news.php");
+					break;
+
+					case "facilities":
+					include(PUBLIC_PATH."/pages/facility.php");
+					break;
+
+					case "download":
+					// include(PUBLIC_PATH."/pages/download.php");
+					echo "Comming Soon";
+					break;
+
 					case "academic program":
 					include(PUBLIC_PATH."/pages/program.php");
 					break;

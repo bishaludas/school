@@ -25,7 +25,7 @@
 			<!-- Map -->
 			<div class="col-md-4">
 				<div class="footer-title">Map</div>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8650.207117956807!2d85.3254630254148!3d27.673203166218613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6da0dfc28cd32f00!2sChi+Chi+Grills!5e0!3m2!1sen!2snp!4v1536206581220" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954.744372478177!2d82.27145555013514!3d28.46954629810476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39bd5500c134c6e5%3A0xd9a048f3e70ce1f7!2sBagchaur+Municipality!5e1!3m2!1sen!2snp!4v1536692450363" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 			<!-- MAP -->
 
@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center border-top py-3">
-					<div> &copy; <?php echo date('Y') ." Bishaludash.com.np"; ?></div>				
+					<div> &copy; <?php echo date('Y') ."  जनकल्याण नमुना माध्यमिक विद्यालय"; ?></div>				
 				</div>
 			</div>
 		</div>

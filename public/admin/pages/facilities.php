@@ -12,7 +12,7 @@
 						<th>Content</th>
 						<th>Delete</th>
 					</tr>
-					<?php $query = mysqli_query($con, "SELECT * FROM testimonial");
+					<?php $query = mysqli_query($con, "SELECT * FROM facilities");
 					$counter =1;
 					while ($row = mysqli_fetch_assoc($query)) {
 						$id= $row['id'];
@@ -25,7 +25,7 @@
 						<td>".ucwords($name)."</a></td>
 						<td><img height='80px' src='$image' alt=''></td>
 						<td>".$content."</td>
-						<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&t_id='.$id.'')."'>Delete</a></td>
+						<td><a class='btn btn-sm btn-danger' href='".url_for('/admin/index.php?url=delete&f_id='.$id.'')."'>Delete</a></td>
 						
 						</tr>";
 
@@ -86,5 +86,5 @@
 
 
 <?php 
-submitTestimonial($con);
+submitFacility($con);
 ?>

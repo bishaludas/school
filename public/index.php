@@ -257,29 +257,9 @@
       <div class="container-fluid">
         <div class="row">
 
-          <!-- start  -->
-          <div class="offset-md-2 col-md-3 text-center mt-4">
-            <div class="testimonial-img">
-              <img src="img/people/1.jpg" alt="">
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eligendi voluptatem, laudantium quibusdam aliquid alias totam nam cumque! Minima, quo!
-            </p>
-            <b>Student</b>
-          </div>
-          <!-- end -->
-
-          <div class="offset-md-2 col-md-3 text-center mt-4">
-            <div class="testimonial-img">
-              <img src="img/people/1.jpg" alt="">
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eligendi voluptatem, laudantium quibusdam aliquid alias totam nam cumque! Minima, quo!
-            </p>
-            <b>Student</b> 
-          </div>
-          
-          
+          <?php 
+          fetchTestimonial($con);
+          ?>          
         </div>
       </div>
     </div>

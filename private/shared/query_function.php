@@ -2,6 +2,7 @@
 function viewLatestNews($con){
 	$query = mysqli_query($con, "SELECT * FROM news ORDER BY id DESC LIMIT 3");
 	while ($row = mysqli_fetch_assoc($query)) {
+		$id = $row['id'];
 		$title = $row['title'];
 		$image = $row['file_path'];
 		$image = str_replace('../', '', $image);
@@ -17,7 +18,7 @@ function viewLatestNews($con){
 		<div class='col-lg-8'>
 		<b>".ucwords($title)."</b>
 		<p> $content ...</p>
-		<a href='#' class='btn btn-sm btn-outline-danger'>Read More</a>
+		<a href='".url_for('/pages?url=news&id='.$id.'')."' class='btn btn-sm btn-outline-danger'>Read More</a>
 		</div>
 		</div>";
 
@@ -28,6 +29,7 @@ function viewLatestNews($con){
 function LatestNewsPages($con){
 	$query = mysqli_query($con, "SELECT * FROM news ORDER BY id DESC LIMIT 3");
 	while ($row = mysqli_fetch_assoc($query)) {
+		$id = $row['id'];
 		$title = $row['title'];
 		$image = $row['file_path'];
 		$content = $row['content'];
@@ -42,7 +44,7 @@ function LatestNewsPages($con){
 		<div class='col-lg-8'>
 		<b>".ucwords($title)."</b>
 		<p> $content ...</p>
-		<a href='#' class='btn btn-sm btn-outline-danger'>Read More</a>
+		<a href='".url_for('/pages?url=news&id='.$id.'')."' class='btn btn-sm btn-outline-danger'>Read More</a>
 		</div>
 		</div>";
 
@@ -53,6 +55,7 @@ function LatestNewsPages($con){
 function bannerNews($con){
 	$query = mysqli_query($con, "SELECT * FROM news ORDER BY id DESC LIMIT 3");
 	while ($row = mysqli_fetch_assoc($query)) {
+		$id = $row['id'];
 		$title = $row['title'];
 		$content = $row['content'];
 		$content = substr($content,0, 80);
@@ -61,7 +64,7 @@ function bannerNews($con){
 		<div class='col-lg-12'>
 		<b>".ucwords($title)."</b>
 		$content
-		<a href='#' class='btn btn-sm btn-outline-danger'>Read More</a>
+		<a href='".url_for('/pages?url=news&id='.$id.'')."' class='btn btn-sm btn-outline-danger'>Read More</a>
 		</div>
 		</div>";
 
@@ -217,4 +220,28 @@ function messageChairman($con){
 		echo $res;
 	}
 }
+
+function fetchTestimonial($con){
+	$query = mysqli_query($con, "SELECT * FROM testimonial");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$name = $row['name'];
+		$image = $row['file_path'];
+		$image = str_replace('../', '', $image);
+		$content = $row['content'];
+
+		$res ="<div class='col-md-4 text-center mt-4'>
+		<div class='testimonial-img'>
+		<img src='$image' alt=''>
+		</div>
+
+		<p>$content</p>
+		<b>$name</b>
+		</div>";
+
+		echo $res;
+	}
+}
+
+
+
 ?>

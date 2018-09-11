@@ -103,14 +103,20 @@
 						</li>
 
 						<!-- faculty -->
-						<li><a href="<?php echo url_for('admin/index.php?url=faculty');?>">
-								<i class="ion-pricetags">&nbsp;&nbsp;</i>Faculty
+						<li><a href="<?php echo url_for('admin/index.php?url=facilities');?>">
+								<i class="ion-pricetags">&nbsp;&nbsp;</i>Facilities
 							</a>
 						</li>
 
 						<!-- faculty -->
 						<li><a href="<?php echo url_for('admin/index.php?url=jfss');?>">
 								<i class="ion-pricetags">&nbsp;&nbsp;</i>JFSS
+							</a>
+						</li>
+
+						<!-- Downloads -->
+						<li><a href="<?php echo url_for('admin/index.php?url=download');?>">
+								<i class="ion-pricetags">&nbsp;&nbsp;</i>Download
 							</a>
 						</li>
 
@@ -235,18 +241,24 @@
 
 
 
-     		// event
+     		// jsff
      		case 'jfss':
 			include(PUBLIC_PATH."/admin/pages/jfss.php");
 			break;
 
+			// event
 			case 'event':
 			include(PUBLIC_PATH."/admin/pages/events.php");
 			break;
 
+			// download
+			case 'download':
+			include(PUBLIC_PATH."/admin/pages/download.php");
+			break;
+
 			// faculty
-			case 'faculty':
-			include(PUBLIC_PATH."/admin/pages/faculty.php");
+			case 'facilities':
+			include(PUBLIC_PATH."/admin/pages/facilities.php");
 			break;
 
 			
