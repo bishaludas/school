@@ -108,6 +108,12 @@
 							</a>
 						</li>
 
+						<!-- faculty -->
+						<li><a href="<?php echo url_for('admin/index.php?url=jfss');?>">
+								<i class="ion-pricetags">&nbsp;&nbsp;</i>JFSS
+							</a>
+						</li>
+
 						<!-- events -->
 						<li><a href="<?php echo url_for('admin/index.php?url=event');?>">
 								<i class="ion-pricetags">&nbsp;&nbsp;</i>Event
@@ -230,6 +236,10 @@
 
 
      		// event
+     		case 'jfss':
+			include(PUBLIC_PATH."/admin/pages/jfss.php");
+			break;
+
 			case 'event':
 			include(PUBLIC_PATH."/admin/pages/events.php");
 			break;

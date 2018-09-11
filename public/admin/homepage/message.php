@@ -8,13 +8,13 @@
 			}else{ echo "<h4>Chairman</h4>";}
 
 
-			 	$query = mysqli_query($con, "SELECT * FROM message WHERE id='$id'");
-			 	while ($row = mysqli_fetch_assoc($query)) {
-			 		$name = hsc($row['name']);
-			 		$message = hsc($row['message']);
-			 		$photo = $row['file_path'];
+			$query = mysqli_query($con, "SELECT * FROM message WHERE id='$id'");
+			while ($row = mysqli_fetch_assoc($query)) {
+				$name = hsc($row['name']);
+				$message = hsc($row['message']);
+				$photo = $row['file_path'];
 
-			 	}
+			}
 			?>
 			<div class="card post-body">
 				<div class="card-body">
@@ -51,17 +51,10 @@
 							</div>
 						</div>
 					</form>
-<?php 
-submitMessage($con, $id);
- ?>
-
-
-
-
-
-
+					<?php 
+					submitMessage($con, $id);
+					?>
 				</div>
-
 			</div>
 		</div>
 	</div>

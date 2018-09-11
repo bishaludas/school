@@ -48,7 +48,7 @@
 <script src="<?php echo url_for('/vendors/js/popper.min.js') ?>"></script>
 <script src="<?php echo url_for('/vendors/js/bootstrap.min.js') ?>"></script>	
 <script src="<?php echo url_for('/vendors/js/navbar-fixed.js') ?>"></script>	
+<script src="<?php echo url_for('/vendors/js/slick.js') ?>"></script>	
 <script src="<?php echo url_for('/resources/js/main.js') ?>"></script>	
-
 </body>
 </html>

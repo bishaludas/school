@@ -14,7 +14,9 @@
 
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="<?php echo url_for('/vendors/css/bootstrap.css'); ?>">
-	<link rel="stylesheet" href="<?php echo url_for('/vendors/css/ionicons.min.css'); ?>">
+  <link rel="stylesheet" href="<?php echo url_for('/vendors/css/ionicons.min.css'); ?>">
+  <link rel="stylesheet" href="<?php echo url_for('/vendors/css/slick.css'); ?>">
+	<link rel="stylesheet" href="<?php echo url_for('/vendors/css/slick-theme.css'); ?>">
 	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Muli" rel="stylesheet">
 
 	<!-- custom stylesheet	 -->
@@ -34,6 +36,7 @@
       	<a class="head-link " href="<?php echo url_for('/'); ?>">
       		<img height="100px" class="mr-3" style="float: left;" src="<?php echo WWW_ROOT.'/img/logo.png' ?>" alt="School Logo">
         <?php FetchName($con); ?>
+        <div style="font-size: 130%;">बागचौर नगरपालिका–२, थारमारे, सल्यान</div>
       	</a>
       </div>
 
@@ -87,11 +90,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo url_for('/pages?url=Facilities') ?>">Facilities</a>
+        <a class="nav-link" href="<?php echo url_for('/pages?url=facilities') ?>">Facilities</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo url_for('/pages?url=Alumni') ?>">JFSS</a>
+        <a class="nav-link" href="<?php echo url_for('/pages?url=jfss') ?>">JFSS</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -107,11 +110,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Gallery</a>
+        <a class="nav-link" href="<?php echo url_for('/pages?url=gallery'); ?>">Gallery</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Career</a>
+        <a class="nav-link" href="<?php echo url_for('/pages?url=career'); ?>">Career</a>
       </li>
      
     </ul>

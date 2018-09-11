@@ -465,71 +465,71 @@ function updateContact($con){
 
 
 function submitMessage($con, $id){
- 	if (isset($_POST['submit'])) {
- 		$name = db_escape($con, $_POST['name']);
- 		$message = db_escape($con, $_POST['post-content']);
+	if (isset($_POST['submit'])) {
+		$name = db_escape($con, $_POST['name']);
+		$message = db_escape($con, $_POST['post-content']);
 
- 		$post_image = $_FILES['fileToUpload']['name'];
- 		if ($post_image != "") {
- 			$target_dir = "../img/people/";
- 			$target_file = $target_dir .uniqid(). basename($post_image);
- 			$uploadOk = 1;
- 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+		$post_image = $_FILES['fileToUpload']['name'];
+		if ($post_image != "") {
+			$target_dir = "../img/people/";
+			$target_file = $target_dir .uniqid(). basename($post_image);
+			$uploadOk = 1;
+			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 			// Check if image file is a actual image or fake image
- 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
- 			if($check !== false) {
- 				echo "File is an image - " . $check["mime"] . ".";
- 				$uploadOk = 1;
- 			} else {
- 				echo "File is not an image.";
- 				$uploadOk = 0;
- 			}
+			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+			if($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				$uploadOk = 1;
+			} else {
+				echo "File is not an image.";
+				$uploadOk = 0;
+			}
 
 			// Check if file already exists
- 			if (file_exists($target_file)) {
- 				echo "Sorry, file already exists.";
- 				$uploadOk = 0;
- 			}
+			if (file_exists($target_file)) {
+				echo "Sorry, file already exists.";
+				$uploadOk = 0;
+			}
 			// Check file size
- 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
- 				echo "Sorry, your file is too large.";
- 				$uploadOk = 0;
- 			}
+			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+				echo "Sorry, your file is too large.";
+				$uploadOk = 0;
+			}
 			// Allow certain file formats
- 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
- 				&& $imageFileType != "gif" ) {
- 				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
- 			$uploadOk = 0;
- 		}
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+				&& $imageFileType != "gif" ) {
+				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+			$uploadOk = 0;
+		}
 			// Check if $uploadOk is set to 0 by an error
- 		if ($uploadOk == 0) {
- 			echo "Sorry, your file was not uploaded.";
+		if ($uploadOk == 0) {
+			echo "Sorry, your file was not uploaded.";
 				// if everything is ok, try to upload file
- 		} 
- 		else {
- 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
- 				echo "The file ". basename($post_image). " has been uploaded.";
- 				$query = mysqli_query($con, "UPDATE message SET message='$message', file_path='$target_file', name ='$name' WHERE id = '$id' ");
- 				if ($query) {
- 					$l = url_for('admin/index.php?url=message&id='.$id.'');
- 					header("Location: $l ");
- 				}
+		} 
+		else {
+			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+				echo "The file ". basename($post_image). " has been uploaded.";
+				$query = mysqli_query($con, "UPDATE message SET message='$message', file_path='$target_file', name ='$name' WHERE id = '$id' ");
+				if ($query) {
+					$l = url_for('admin/index.php?url=message&id='.$id.'');
+					header("Location: $l ");
+				}
 
- 			} else {
- 				echo "Sorry, there was an error uploading your file.";
- 			}
- 		}	
- 	}
- 	else{
- 		$query = mysqli_query($con, "UPDATE message SET message='$message', name ='$name' WHERE id = '$id' ");
- 		if ($query) {
- 			$l = url_for('admin/index.php?url=message&id='.$id.'');
- 			header("Location: $l ");
- 		}
- 	}
- }
+			} else {
+				echo "Sorry, there was an error uploading your file.";
+			}
+		}	
+	}
+	else{
+		$query = mysqli_query($con, "UPDATE message SET message='$message', name ='$name' WHERE id = '$id' ");
+		if ($query) {
+			$l = url_for('admin/index.php?url=message&id='.$id.'');
+			header("Location: $l ");
+		}
+	}
 }
+} 
 /*******************
 ***Program*******
 *******************/
@@ -713,4 +713,22 @@ function faculty($con){
 		++$counter;
 	}
 }
+
+
+
+function jsff($con){
+	if (isset($_POST['submit'])) {
+		$body = db_escape($con, $_POST['post-content']);
+
+		$query=mysqli_query($con, "UPDATE jfss SET name='$body' WHERE id=1 ");
+		if ($query) {
+			$l = url_for('admin/index.php?url=jfss');
+			header("Location: $l ");
+		}else{
+			echo mysqli_error($con);
+		}
+	} 
+}
+
+
 ?>

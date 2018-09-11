@@ -25,7 +25,6 @@ function viewLatestNews($con){
 	}
 }
 
-
 function LatestNewsPages($con){
 	$query = mysqli_query($con, "SELECT * FROM news ORDER BY id DESC LIMIT 3");
 	while ($row = mysqli_fetch_assoc($query)) {
@@ -51,6 +50,24 @@ function LatestNewsPages($con){
 	}
 }
 
+function bannerNews($con){
+	$query = mysqli_query($con, "SELECT * FROM news ORDER BY id DESC LIMIT 3");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$title = $row['title'];
+		$content = $row['content'];
+		$content = substr($content,0, 80);
+
+		$res ="<div class='row news-list py-2'>
+		<div class='col-lg-12'>
+		<b>".ucwords($title)."</b>
+		$content
+		<a href='#' class='btn btn-sm btn-outline-danger'>Read More</a>
+		</div>
+		</div>";
+
+		echo $res;
+	}
+}
 
 
 function FetchName($con){
@@ -124,39 +141,80 @@ function ContactFooter($con){
 
 
 
- function selectProgram($con){
- 	$query = mysqli_query($con, "SELECT id,title FROM programs");
- 	while ($row = mysqli_fetch_assoc($query)) {
- 		$name = hsc($row['title']);
- 		$prog_id = hsc($row['id']);
+function selectProgram($con){
+	$query = mysqli_query($con, "SELECT id,title FROM programs");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$name = hsc($row['title']);
+		$prog_id = hsc($row['id']);
 
- 		echo "<a class='dropdown-item' href='".url_for('/pages?url=academic program&id='.$prog_id.'')."'>$name</a>";
- 	}
- }
+		echo "<a class='dropdown-item' href='".url_for('/pages?url=academic program&id='.$prog_id.'')."'>$name</a>";
+	}
+}
 
 
 function viewProgram($con, $prog_id){
-  $query = mysqli_query($con, "SELECT * FROM programs WHERE id ='$prog_id' LIMIT 1");
-  while ($row = mysqli_fetch_assoc($query)) {
-    $title = $row['title'];
+	$query = mysqli_query($con, "SELECT * FROM programs WHERE id ='$prog_id' LIMIT 1");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$title = $row['title'];
 
 
-    $image = $row['file_path'] ? $row['file_path'] : '../img/School.jpg';
+		$image = $row['file_path'] ? $row['file_path'] : '../img/School.jpg';
 
 
-    $content = $row['content'];
+		$content = $row['content'];
 
-    $res ="<div id='about-content'>
-    <span>$title</span>
-    <div class='program-image'>
-    <img style='max-height:500px;' src='$image' alt='image' class='img-fluid'>
-    </div>
-    <div>$content</div>
-    </div>";
+		$res ="<div id='about-content'>
+		<span>$title</span>
+		<div class='program-image'>
+		<img style='max-height:500px;' src='$image' alt='image' class='img-fluid'>
+		</div>
+		<div>$content</div>
+		</div>";
 
-    echo $res;
+		echo $res;
 
 
-  } 
+	} 
+}
+
+
+function messagePrincipal($con){
+	$query = mysqli_query($con, "SELECT * FROM message WHERE id=1");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$name = hsc($row['name']);
+		$message = $row['message'];
+		$photo = $row['file_path'];
+		$photo = str_replace('../', '', $photo);
+
+		$res = "<div class='message-img'>
+		<img src='$photo' alt=''>
+		</div>
+		<p class='message-man text-center'>Mr. ".ucwords($name)."</p>
+
+		<p class='message-body'>
+		$message
+		</p>";
+		echo $res;
+	}
+}
+
+function messageChairman($con){
+	$query = mysqli_query($con, "SELECT * FROM message WHERE id=2");
+	while ($row = mysqli_fetch_assoc($query)) {
+		$name = hsc($row['name']);
+		$message = $row['message'];
+		$photo = $row['file_path'];
+		$photo = str_replace('../', '', $photo);
+
+		$res = "<div class='message-img'>
+		<img src='$photo' alt=''>
+		</div>
+		<p class='message-man text-center'>Mr. ".ucwords($name)."</p>
+
+		<p class='message-body'>
+		$message
+		</p>";
+		echo $res;
+	}
 }
 ?>

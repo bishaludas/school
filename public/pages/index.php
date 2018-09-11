@@ -23,12 +23,17 @@
 					case "academic program":
 					include(PUBLIC_PATH."/pages/program.php");
 					break;
-					
-					case "green":
-					echo "Your favorite color is green!";
+
+					case "gallery":
+					include(PUBLIC_PATH."/pages/gallery.php");
 					break;
+					
+					case "jfss":
+					include(PUBLIC_PATH."/pages/jfss.php");
+					break;
+
 					default:
-					echo "Your favorite color is neither red, blue, nor green!";
+					echo "Comming Soon !";
 				}
 				?>
 			</div>

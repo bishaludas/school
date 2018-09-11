@@ -47,14 +47,14 @@ ul{
 }
 
 .head-link{
-    color: #fff;
+    color: #000;
 }
 .head-link:hover{
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 .head-link h2{
-   width: 70%;
+   font-weight: 600;
 }
 .display {
     display: block !important;
@@ -189,9 +189,14 @@ input[type="submit"]:hover{
 }
 .cs-img1{ background: url("img/1.jpg"); }
 .cs-img2{ background: url("img/2.jpg"); }
-.cs-img3{ background: url("img/3.jpeg"); }
+.cs-img3{ background: url("img/11.jpg"); }
+.cs-img6{ background: url("img/6.jpg"); }
+.cs-img7{ background: url("img/7.jpg"); }
+.cs-img8{ background: url("img/8.jpg"); }
+.cs-img9{ background: url("img/9.jpg"); }
+.cs-img10{ background: url("img/10.jpg"); }
 
-.cs-img1, .cs-img2, .cs-img3{
+.cs-img1, .cs-img2, .cs-img3, .cs-img6, .cs-img7, .cs-img8, .cs-img9, .cs-img10{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -261,7 +266,6 @@ input[type="submit"]:hover{
     text-transform: uppercase;
     font-size: 150%;
     padding-bottom: 30px;
-    margin-bottom: 30px;
     border-bottom: 2px solid #dadada;
 }
 .message-img, .testimonial-img{
@@ -422,4 +426,28 @@ input[type="submit"]:hover{
 
 .cms-table-border{
     border: 1px solid #dcdcdc;
+}
+
+.autoplay-image img{
+    width: 90%;
+}
+.autoplay-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 150%;
+    padding-bottom: 30px;
+}
+
+
+/*gallery*/
+.gallert-li{
+    display: inline-block;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    width: 30%;
+    overflow: hidden;
+}
+.gallery-img{
+    height: 200px;
 }

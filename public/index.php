@@ -17,6 +17,11 @@
           <li data-target="#carousel-image" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-image" data-slide-to="1"></li>
           <li data-target="#carousel-image" data-slide-to="2"></li>
+          <li data-target="#carousel-image" data-slide-to="3"></li>
+          <li data-target="#carousel-image" data-slide-to="4"></li>
+          <li data-target="#carousel-image" data-slide-to="5"></li>
+          <li data-target="#carousel-image" data-slide-to="6"></li>
+          <li data-target="#carousel-image" data-slide-to="7"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item cs-img1 active">
@@ -26,6 +31,22 @@
             <!-- <img class="d-block w-100" src="img/banner/2.jpeg" alt="Second slide"> -->
           </div>
           <div class="carousel-item cs-img3">
+            <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
+          </div>
+
+          <div class="carousel-item cs-img6">
+            <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
+          </div>
+          <div class="carousel-item cs-img7">
+            <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
+          </div>
+          <div class="carousel-item cs-img8">
+            <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
+          </div>
+          <div class="carousel-item cs-img9">
+            <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
+          </div>
+          <div class="carousel-item cs-img10">
             <!-- <img class="d-block w-100" src="img/banner/3.jpeg" alt="Third slide"> -->
           </div>
         </div>
@@ -59,16 +80,10 @@
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane tab-mod fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus accusantium explicabo amet deserunt incidunt culpa est dolore placeat commodi?
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus accusantium explicabo amet deserunt incidunt culpa est dolore placeat commodi?
-            </p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus accusantium explicabo amet deserunt incidunt culpa est dolore placeat commodi?
-            </p>
+            <?php bannerNews($con); ?>
           </div>
+
+
           <div class="tab-pane tab-mod fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!</p>
           </div>
@@ -112,29 +127,16 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="message-title">MESSAGE FROM Principle</div>
-
-          <div class="message-img">
-            <img src="img/people/3.jpg" alt="">
-          </div>
-          <p class="message-man text-center">Mr. Purna Bhandari Pankaj</p>
-
-          <p class="message-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolores ab magni, placeat in. Laboriosam et, nulla aspernatur quam asperiores praesentium. Velit id animi maiores veniam impedit suscipit corporis unde.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis reiciendis magnam impedit mollitia neque aspernatur suscipit incidunt voluptates, iste minus.
-          </p>
+          <?php 
+          messagePrincipal($con);
+          ?>
+          
         </div>
+
         <div class="col-lg-6">
           <div class="message-title">MESSAGE FROM CHAIRMAIN</div>
 
-          <div class="message-img">
-            <img src="img/people/2.jpg" alt="">
-          </div>
-          <p class="message-man text-center">Mr. Someone</p>
-
-          <p class="message-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolores ab magni, placeat in. Laboriosam et, nulla aspernatur quam asperiores praesentium. Velit id animi maiores veniam impedit suscipit corporis unde.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis reiciendis magnam impedit mollitia neque aspernatur suscipit incidunt voluptates, iste minus.
-          </p>
+          <?php messageChairman($con); ?>
         </div>
       </div>
     </div>
@@ -159,24 +161,6 @@
             <?php 
             viewLatestNews($con);
             ?>
-            
-
-            <!-- end here -->
-
-            <!-- Start here -->
-            <div class="row news-list py-2">
-              <div class="col-lg-4">
-                <div class="news-img">
-                  <img src="img/people/2.jpg" class="img-fluid" alt="">
-                </div>
-
-              </div>
-              <div class="col-lg-8">
-                <b>title</b>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, doloribus.</p>
-                <a href="#" class="btn btn-sm btn-outline-danger">Read More</a>
-              </div>
-            </div>
             <!-- end here -->
 
           </div>
@@ -231,6 +215,39 @@
   </section>
   <!-- NEWS SECTION End-->
 
+  <div class="section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="autoplay-title">We Provide Innovative Education</div>
+        </div>  
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="slider mx-3">
+            <div class="autoplay-image">
+              <img src="img/slider/1.jpg" class="img-fluid" alt="abc">
+            </div>
+            <div class="autoplay-image">
+              <img src="img/slider/2.jpg" class="img-fluid" alt="abc">
+            </div>
+            <div class="autoplay-image">
+              <img src="img/slider/3.jpg" class="img-fluid" alt="abc">
+            </div>
+            <div class="autoplay-image">
+              <img src="img/slider/4.jpg" class="img-fluid" alt="abc">
+            </div>
+            <div class="autoplay-image">
+              <img src="img/slider/5.jpg" class="img-fluid" alt="abc">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <!-- testimonial -->
@@ -241,7 +258,7 @@
         <div class="row">
 
           <!-- start  -->
-          <div class="col-md-3 text-center mt-4">
+          <div class="offset-md-2 col-md-3 text-center mt-4">
             <div class="testimonial-img">
               <img src="img/people/1.jpg" alt="">
             </div>
@@ -252,15 +269,16 @@
           </div>
           <!-- end -->
 
-          <div class="col-md-3 text-center mt-4">
-            lol 
+          <div class="offset-md-2 col-md-3 text-center mt-4">
+            <div class="testimonial-img">
+              <img src="img/people/1.jpg" alt="">
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eligendi voluptatem, laudantium quibusdam aliquid alias totam nam cumque! Minima, quo!
+            </p>
+            <b>Student</b> 
           </div>
-          <div class="col-md-3 text-center mt-4">
-            lol 
-          </div>
-          <div class="col-md-3 text-center mt-4">
-            lol 
-          </div>
+          
           
         </div>
       </div>
@@ -269,10 +287,6 @@
   
 
 </section>
-
-
-
-
 
 
 

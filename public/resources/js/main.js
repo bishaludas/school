@@ -28,8 +28,6 @@ $(".mobile-nav-icon").on("click", function(){
 	}
 });
 
-
-
 $(".news").on("click", function(){
 	$(".news-li").fadeToggle(300);
 });
@@ -44,3 +42,11 @@ $(".about").on("click", function(){
 $(".program").on("click", function(){
 	$(".p-li").fadeToggle(300);
 });
+
+$('.slider').slick({ 
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+
