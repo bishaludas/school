@@ -57,39 +57,21 @@
 
 
 @media only screen and (max-width: 480px){
-	*{
-		font-size: 15px;
+	h2{
+		font-size: 210%;
 	}
-	.bg-section{
-	padding: 20px 0;
+	.address{
+		font-size: 90% !important;
+		margin-bottom: 10px;
 	}
-	.section{
-		padding: 20px 0;
-	}
-	.menu-nav {
-     margin-bottom: 0px; 
-	}
-	.home-text h1 {
-    	font-size: 255%;
-	}
-	.ion-navicon, .ion-android-close{
-    font-size: 200%;
-	}
-
-	.hero_text {
-    top: 10%;
-   
 }
 
 @media only screen and (max-width: 374px){
-	.hero-img{
-		width: 60%;
+	h2 {
+    font-size: 170%;
 	}
-	.home-text h1 {
-    	font-size: 232%;
+	.address{
+		font-size: 80% !important;
+		margin-bottom: 10px;
 	}
-
-	.hero-btn {
-    display: inline-block;
-    width: 43%;
 }

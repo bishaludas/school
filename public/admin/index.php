@@ -19,9 +19,9 @@
 			<div class="row">
 				<div class="col-lg-2">
 					<div class="sidebar-wrapper">
-					<h2>Side Menu</h2>
-					<ul>
-						<li><a href="<?php echo url_for('/admin') ?>">
+						<h2>Side Menu</h2>
+						<ul>
+							<li><a href="<?php echo url_for('/admin') ?>">
 								<i class="ion-android-clipboard">&nbsp;&nbsp;</i>Dashboard
 							</a>
 						</li>
@@ -30,31 +30,31 @@
 						<li class="post-main homepage"><i class="ion-ios-home">&nbsp;&nbsp;</i>Home Page <i class="ion-arrow-down-b"></i>
 							<li class="post-li home">
 								<a href="<?php echo url_for('admin/index.php?url=message&id=1');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Principle Message
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Principle Message
 								</a>
 							</li>
 
 							<li class="post-li home">
 								<a href="<?php echo url_for('admin/index.php?url=message&id=2');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chairman Message
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chairman Message
 								</a>
 							</li>
 
 							<li class="post-li home">
 								<a href="<?php echo url_for('admin/index.php?url=testimonial');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testimonial
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testimonial
 								</a>
 							</li>
 
 							<li class="post-li home">
 								<a href="<?php echo url_for('admin/index.php?url=social');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social
 								</a>
 							</li>
 
 							<li class="post-li home">
 								<a href="<?php echo url_for('admin/index.php?url=contact');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact
 								</a>
 							</li>
 						</li>
@@ -76,13 +76,13 @@
 
 							<li class="post-li about-li">
 								<a href="<?php echo url_for('admin/index.php?url=about us&column=profile');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School Profile
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School Profile
 								</a>
 							</li>	
 
 							<li class="post-li about-li">
 								<a href="<?php echo url_for('admin/index.php?url=about us&column=management');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School Management
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School Management
 								</a>
 							</li>						
 						</li>
@@ -97,42 +97,10 @@
 
 							<li class="post-li p-li">
 								<a href="<?php echo url_for('admin/index.php?url=add program');?>" style="font-size: 80%;">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Program
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Program
 								</a>
 							</li>							
 						</li>
-
-						<!-- faculty -->
-						<li><a href="<?php echo url_for('admin/index.php?url=facilities');?>">
-								<i class="ion-pricetags">&nbsp;&nbsp;</i>Facilities
-							</a>
-						</li>
-
-						<!-- faculty -->
-						<li><a href="<?php echo url_for('admin/index.php?url=jfss');?>">
-								<i class="ion-pricetags">&nbsp;&nbsp;</i>JFSS
-							</a>
-						</li>
-
-						<!-- Downloads -->
-						<li><a href="<?php echo url_for('admin/index.php?url=download');?>">
-								<i class="ion-pricetags">&nbsp;&nbsp;</i>Download
-							</a>
-						</li>
-
-						<!-- events -->
-						<li><a href="<?php echo url_for('admin/index.php?url=event');?>">
-								<i class="ion-pricetags">&nbsp;&nbsp;</i>Event
-							</a>
-						</li>
-						
-						<!-- categories -->
-						<li><a href="<?php echo url_for('admin/index.php?url=category');?>">
-								<i class="ion-pricetags">&nbsp;&nbsp;</i>Categories
-							</a>
-						</li>
-						
-
 						<!-- news -->
 						<li class="post-main news"><i class="ion-compose">&nbsp;&nbsp;</i>News <i class="ion-arrow-down-b"></i>
 							<li class="post-li news-li">
@@ -144,20 +112,55 @@
 							<li class="post-li news-li"><a href="<?php echo url_for('admin/index.php?url=add news');?>" style="font-size: 80%;">
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add
 							</a>
-							</li>
 						</li>
-				<li><a href="<?php echo url_for('admin/index.php?url=image');?>">
-					<i class="ion-ios-camera"></i>&nbsp;&nbsp;Gallery
-				</a>
+					</li>
+
+					<!-- gallery -->
+					<li><a href="<?php echo url_for('admin/index.php?url=image');?>">
+						<i class="ion-ios-camera"></i>&nbsp;&nbsp;Gallery
+					</a>
 				</li>
-				
-				
 
 
 
-		</ul>
+				<!-- faculty -->
+				<li><a href="<?php echo url_for('admin/index.php?url=facilities');?>">
+					<i class="ion-pricetags">&nbsp;&nbsp;</i>Facilities
+				</a>
+			</li>
 
-	</div>
+			<!-- faculty -->
+			<li><a href="<?php echo url_for('admin/index.php?url=jfss');?>">
+				<i class="ion-pricetags">&nbsp;&nbsp;</i>JFSS
+			</a>
+		</li>
+
+		<!-- Downloads -->
+		<li><a href="<?php echo url_for('admin/index.php?url=download');?>">
+			<i class="ion-pricetags">&nbsp;&nbsp;</i>Download
+		</a>
+	</li>
+
+	<!-- events -->
+	<li><a href="<?php echo url_for('admin/index.php?url=event');?>">
+		<i class="ion-pricetags">&nbsp;&nbsp;</i>Event
+	</a>
+</li>
+
+<!-- Career -->
+<li><a href="<?php echo url_for('admin/index.php?url=career');?>">
+	<i class="ion-pricetags">&nbsp;&nbsp;</i>Career
+</a>
+</li>
+
+<!-- categories -->
+<li><a href="<?php echo url_for('admin/index.php?url=category');?>">
+	<i class="ion-pricetags">&nbsp;&nbsp;</i>Categories
+</a>
+</li>
+</ul>
+
+</div>
 
 </div>
 <div class="col-lg-10">
@@ -182,7 +185,7 @@
 		}else{
 			$url = "";
 		}
-			
+
 
 		switch ($url) {
 			// HOMEPAGE
@@ -224,6 +227,10 @@
 			include(PUBLIC_PATH."/admin/pages/categories.php");
 			break;
 
+			case 'career':
+			include(PUBLIC_PATH."/admin/pages/career.php");
+			break;
+
 
 			//program
 			case 'add program':
@@ -242,7 +249,7 @@
 
 
      		// jsff
-     		case 'jfss':
+			case 'jfss':
 			include(PUBLIC_PATH."/admin/pages/jfss.php");
 			break;
 

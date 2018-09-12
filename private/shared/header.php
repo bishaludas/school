@@ -16,8 +16,9 @@
 	<link rel="stylesheet" href="<?php echo url_for('/vendors/css/bootstrap.css'); ?>">
   <link rel="stylesheet" href="<?php echo url_for('/vendors/css/ionicons.min.css'); ?>">
   <link rel="stylesheet" href="<?php echo url_for('/vendors/css/slick.css'); ?>">
-	<link rel="stylesheet" href="<?php echo url_for('/vendors/css/slick-theme.css'); ?>">
-	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Muli" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo url_for('/vendors/css/slick-theme.css'); ?>">
+	<link rel="stylesheet" href="<?php echo url_for('/vendors/css/ekko-lightbox.css'); ?>">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Muli" rel="stylesheet">
 
 	<!-- custom stylesheet	 -->
 	<link rel="stylesheet" href="<?php echo url_for('/resources/css/style.css'); ?>">
@@ -36,7 +37,7 @@
       	<a class="head-link " href="<?php echo url_for('/'); ?>">
       		<img height="100px" class="mr-3" style="float: left;" src="<?php echo WWW_ROOT.'/img/logo.png' ?>" alt="School Logo">
         <?php FetchName($con); ?>
-        <div style="font-size: 130%;">बागचौर नगरपालिका–२, थारमारे, सल्यान</div>
+        <div class="address" style="font-size: 130%;">बागचौर नगरपालिका–२, थारमारे, सल्यान</div>
       	</a>
       </div>
 

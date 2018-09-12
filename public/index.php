@@ -8,6 +8,11 @@
 
 
 <!-- BANNER AREA -->
+<div class="container">
+  <div class="row">
+   <marquee><p style="font-family: Impact; font-size: 12pt">मिति २०७५ भाद्र २७ गते जनकल्याण नमुना माध्यमिक विद्यालय वागचाैर न.पा. -२ थारमारेकाे वार्षिकोत्सब समारोहकाे अवसरमा जनकल्याण पूर्वविद्यार्थी समाजद्वारा विद्यालयकाे वेवसाइट निर्माण गरि उद्घाटन तथा हस्तान्तरण कार्यक्रम सम्पन्न गरिदै ।</p></marquee>
+ </div>
+</div>
 <div class="container-fluid mb-5">
   <div class="row">
     <div class="col-md-9">
@@ -72,20 +77,15 @@
       <div class="col-md-3 ">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">News</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">News and Notices</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Events</a>
-          </li>
+          </li> -->
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane tab-mod fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <?php bannerNews($con); ?>
-          </div>
-
-
-          <div class="tab-pane tab-mod fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit!</p>
           </div>
         </div>
       </div>
@@ -172,39 +172,40 @@
         <!-- Event SECTION start -->
         <div class="col-lg-6">
           <div class="message-title"><i class="ion-android-calendar"></i>&nbsp;&nbsp;&nbsp;Upcomming Events</div>
-          <!-- Start here -->
-          <div class="row event-list py-2">
-            <div class="col-lg-4">
-              <ul class="event-day text-center border">
-                <li class="bg-event py-2">Month</li>
-                <li class="bg-light py-2">Day</li>
-              </ul>
-              
-            </div>
-            <div class="col-lg-8">
-              <b>title</b>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, doloribus.</p>
-              <hr>
-            </div>
-          </div>
-          <!-- end here -->
 
-          <!-- Start here -->
-          <div class="row event-list py-2">
-            <div class="col-lg-4">
-              <ul class="event-day text-center border">
-                <li class="bg-event py-2">Month</li>
-                <li class="bg-light py-2">Day</li>
+          <?php 
+          function Events($con){
+            $query = mysqli_query($con, "SELECT * FROM events ORDER BY date");
+            $counter =1;
+            while ($row = mysqli_fetch_assoc($query)) {
+              $id = url($row['id']);
+              $event_title = $row['title'];
+              $event_body = $row['body'];
+              $date = $row['date'];
+              $yrdata = strtotime($date);
+
+              $res ="<div class='row event-list py-2'>
+              <div class='col-lg-4'>
+              <ul class='event-day text-center border'>
+              <li class='bg-event py-2'>".date('F, Y', $yrdata)."</li>
+              <li class='bg-light py-2'>".date('jS', $yrdata)."</li>
               </ul>
               
-            </div>
-            <div class="col-lg-8">
-              <b>title</b>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, doloribus.</p>
+              </div>
+              <div class='col-lg-8'>
+              <b>$event_title</b>
+              <p>$event_body</p>
               <hr>
-            </div>
-          </div>
-          <!-- end here -->
+              </div>
+              </div>";
+
+              echo $res;      
+              ++$counter;
+            }
+          }
+
+          Events($con);
+          ?>
         </div>
         <!-- NEWS SECTION start -->
 

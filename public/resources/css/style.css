@@ -118,7 +118,9 @@ input[type="submit"]:hover{
     line-height: 35px;
     border-radius: 50%;
 }
-
+.map{
+    overflow: hidden;
+}
 /********************
 ******navbar*******
 *******************/
@@ -451,3 +453,5 @@ input[type="submit"]:hover{
 .gallery-img{
     height: 200px;
 }
+
+

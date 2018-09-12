@@ -50,3 +50,9 @@ $('.slider').slick({
   autoplaySpeed: 2000,
 });
 
+//lightbox
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+

@@ -29,8 +29,7 @@
 					break;
 
 					case "download":
-					// include(PUBLIC_PATH."/pages/download.php");
-					echo "Comming Soon";
+					include(PUBLIC_PATH."/pages/download.php");
 					break;
 
 					case "academic program":
@@ -43,6 +42,10 @@
 					
 					case "jfss":
 					include(PUBLIC_PATH."/pages/jfss.php");
+					break;
+
+					case "career":
+					include(PUBLIC_PATH."/pages/career.php");
 					break;
 
 					default:

@@ -311,9 +311,9 @@ function selectAboutUslim($con){
 	$query = mysqli_query($con, "SELECT about_us FROM homepage");
 	while ($row = mysqli_fetch_assoc($query)) {
 		$content = $row['about_us'];
-		$content = substr($content,0, 2938);
+		$content = substr($content,0, 2882);
 
-		echo $content;
+		echo "<div class='text-justify'>".$content."</div>";
 	}
 } 
 
@@ -866,6 +866,84 @@ function jsff($con){
 }
 
 
+function submitFile($con){
+ 	if (isset($_POST['submit'])) {
+ 		$name = $_POST['name'];
 
+ 		$post_image = $_FILES['fileToUpload']['name'];
+ 		if ($post_image != "") {
+ 			$target_dir = "../documents/";
+ 			$target_file = $target_dir .uniqid(). basename($post_image);
+ 			$file = basename($post_image);
+ 			$uploadOk = 1;
+ 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+			// Check if file already exists
+ 			if (file_exists($target_file)) {
+ 				echo "Sorry, file already exists.";
+ 				$uploadOk = 0;
+ 			}
+			// Check file size
+ 			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+ 				echo "Sorry, your file is too large.";
+ 				$uploadOk = 0;
+ 			}
+			// Allow certain file formats
+ 			if($imageFileType != "doc" && $imageFileType != "pdf" && $imageFileType != "xlsx"
+ 				&& $imageFileType != "docx" ) {
+ 				echo "Sorry, only doc, pdf, xls & GIF files are allowed.";
+ 			$uploadOk = 0;
+ 		}
+			// Check if $uploadOk is set to 0 by an error
+ 		if ($uploadOk == 0) {
+ 			echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+ 		} 
+ 		else {
+ 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+ 				echo "The file ". basename($post_image). " has been uploaded.";
+ 				$query = mysqli_query($con, "INSERT INTO download(name, file_path, file) VALUES( '$name','$target_file', '$file')");
+			 		if ($query) {
+			 			$l = url_for('admin/index.php?url=download');
+						header("Location: $l ");
+			 		}
+ 			} else {
+ 				echo "Sorry, there was an error uploading your file.";
+ 			}
+ 		}	
+ 	}
+ }
+}
+
+function deleteFile($con, $file_id){
+	if (isset($_POST["del_yes"])) {
+		$query = mysqli_query($con, "DELETE FROM download WHERE id='".db_escape($con, $file_id)."' LIMIT 1" );
+		if ($query) {
+			$l = url_for('admin/index.php?url=download');
+			header("Location: $l ");
+		}
+	}else{
+		if (isset($_POST["del_no"])) {
+			$l = url_for('admin/index.php?url=download');
+			header("Location: $l ");
+		}
+	}
+}
+
+
+
+function career($con){
+	if (isset($_POST['submit'])) {
+		$body = db_escape($con, $_POST['post-content']);
+
+		$query=mysqli_query($con, "UPDATE career SET content='$body' WHERE id=1 ");
+		if ($query) {
+			$l = url_for('admin/index.php?url=career');
+			header("Location: $l ");
+		}else{
+			echo mysqli_error($con);
+		}
+	} 
+}
 
 ?>

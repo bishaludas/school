@@ -16,59 +16,26 @@
 	}
 </style>
 <div id="about-content" >
-	<ul style="width: 100%; ">
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/1.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/2.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/3.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/4.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/5.jpg'); ?> " alt=""></li>
-			<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/6.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/7.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/8.jpg'); ?> " alt=""></li>
+<ul style="width: 100%; ">
+<?php 
+	$query = mysqli_query($con, "SELECT * FROM gallery ORDER BY id DESC");
+	while ($row = mysqli_fetch_assoc($query)) {
+ 		$id = $row['id'];
+ 		$path = $row['file_path'];
 
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/9.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/10.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/11.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/12.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/13.jpg'); ?> " alt=""></li>
-			<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/14.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/15.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/16.jpg'); ?> " alt=""></li>
-
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/17.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/18.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/19.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/20.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/21.jpg'); ?> " alt=""></li>
-			<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/22.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/23.jpg'); ?> " alt=""></li>
-		<li class="gallert-li">
-			<img class="gallery-img" src="<?php echo url_for('/img/gallery/24.jpg'); ?> " alt=""></li>
-	</ul>
-</div>
+ 		$res ="<li class='gallert-li'>
+					<a href='$path' data-toggle='lightbox' data-gallery='gallery'>
+						<img class='gallery-img' src='$path' alt=''>
+					</a>
+				</li>";
+		echo $res;
+ 	}
+ ?>
+ </ul>
+ </div>
 <div class="clear-fix"></div>
 <div class="mb-5"></div>
+
+
+
 
